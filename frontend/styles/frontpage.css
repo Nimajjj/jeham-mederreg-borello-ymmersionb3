@@ -1,8 +1,8 @@
 :root {
 
-    --black : #010101;
-    --white : #ffffff;
-    --greyz : #f2f2f4;
+    --black: #010101;
+    --white: #ffffff;
+    --greyz: #f2f2f4;
 
 }
 
@@ -10,6 +10,7 @@
     font-family: 'CenturyBold';
     src: url('../fonts/CenturyGothicW05-Bold.woff2');
 }
+
 @font-face {
     font-family: 'CenturyRegular';
     src: url('../fonts/CenturyGothicW05-Regular.woff2');
@@ -24,6 +25,11 @@
 
 header {
     text-align: center;
+    position: sticky;
+    top: 0;
+    color: var(--white);
+    z-index: 1;
+
 }
 
 header h1 {
@@ -32,8 +38,7 @@ header h1 {
 }
 
 .Menu {
-    background-color: var(--greyz);
-    color: var(--black);
+    background-color: transparent;
     display: flex;
     justify-content: center;
 }
@@ -42,7 +47,8 @@ header h1 {
     display: flex;
     list-style: none;
     justify-content: space-between;
-    width: 100%;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .Menu ul li {
@@ -54,19 +60,28 @@ header h1 {
 
 .Menu ul li a {
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
 }
 
 .video {
     width: 100%;
-    height: 500px;
+    height: 800px;
     object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.logo_class {
+    margin-left: 20px;
 }
 
 .video video {
     width: 100%;
-    height: 100%;
+    height: 50%;
     object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: 0;
 }
 
 .navigation {
@@ -74,20 +89,14 @@ header h1 {
     justify-content: flex-end;
     margin: 20px 0;
 }
+
 .navigation div {
     padding: 10px;
 }
 
 .navigation div a {
     text-decoration: none;
-    color: var(--black);
-}
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
+    color: var(--white);
 }
 
 .content-season {
@@ -98,7 +107,7 @@ header h1 {
     margin: 20px 0;
 }
 
- h4{
+h4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -106,111 +115,135 @@ header h1 {
     margin: 20px 0;
 }
 
- .title-season p {
-     text-align: center;
- }
+.title-season p {
+    text-align: center;
+}
 
 .categories {
     display: flex;
+    height: 500px;
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    margin: 20px 0;
+    margin: 40px 0;
 }
 
-.categories div {
-    width: 25%;
-    height : 400px;
-}
-
-.img-cailloux {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.img-cailloux img {
-    width: 200%;
-}
-
-
-.cailloux {
-    background-color: var(--black);
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-.img-rocher {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.img-rocher img {
-    width: 200%;
-}
-
-.rocher {
+.container {
     background-color: var(--greyz);
-    color: var(--black);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-
-}
-
-.img-pierres {
     width: 100%;
+}
+
+.container_products {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.img-pierres img {
-    width: 200%;
-}
-
-.pierres {
-    background-color: var(--black);
-    color: var(--white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
-}
-
-.img-galets {
     width: 100%;
+}
+
+.rock {
+    width: inherit;
+    height: 500px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-flow: column;
+    justify-content: center;
 }
 
-.img-galets img {
-    width: 200%;
-}
-
-.galets {
+.rock_product {
     background-color: var(--greyz);
-    color: var(--black);
+    width: inherit;
+    height: 500px;
     display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    opacity: 1;
+    z-index: 1;
+    /*space beetween product*/
+    margin: 0 2px;
+}
+
+.rock_hover {
+    /* put on the same level of rock_product */
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+}
+
+.rock_product:hover {
+    & img {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+    }
+
+    & .rock_hover {
+        display: flex;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+
+    & .description_hover {
+        display: flex;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+}
+
+.description_hover {
+    /* put on the same level of rock_product */
+    opacity: 0;
+    display: flex;
+    flex-flow: row;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: 20px 0;
+    gap: 400px;
+
+}
+
+
+img {
+    width: 200px;
+    height: 200px;
+    flex: 1;
+    object-fit: contain;
+}
+
+.rock:hover {
+    & img, & p {
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+p {
+    align-self: flex-start;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.txt {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: column;
+    font-family: 'CenturyBold', Arial, sans-serif;
+}
+
+.txt_regular {
+    width: 100%;
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column;
+    margin: 10px 0;
+}
+
+
+/*set even div background color to black (container children)*/
+.container .rock:nth-child(even) {
+    background-color: black;
+    color: white;
 }
