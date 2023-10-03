@@ -1,6 +1,8 @@
 package main
 
 import (
+	"fmt"
+
 	"prgc/repo"
 	"prgc/routes"
 )
@@ -14,6 +16,12 @@ func main() {
 
 	// MAIN
 	routes.SetupRoutes() // init each routes
+
+    pebbles := LoadJSONPebbles()
+    fmt.Println("---pebbles---")
+    for _, p := range pebbles{
+        fmt.Printf("%d -> %s\n", p.ID, p.Title)
+    }
 
 	// RUN
 	routes.Run(HOST) // run api

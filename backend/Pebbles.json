@@ -5,7 +5,7 @@
       "description": "Le diamant Koh-i-Noor, 105 carats de pure splendeur et de légende. Ce joyau maudit aux origines mystérieuses saura fasciner même le plus exigeant des collectionneurs.",
       "price": 5.50,
       "breed": "pierre",
-      "poids": 21.12,
+      "weight": 21.12,
       "quantity" : 1,
       "categorie": ["historique", "precieux", "maudit"],
       "image": [""] 
@@ -15,7 +15,7 @@
       "description": "La Pierre de Rosette, clé de voûte de la déchiffrage des hiéroglyphes égyptiens. Ce marbre noir ancestral aux inscriptions précieuses sera le complément indispensable de toute collection d'antiquités égyptiennes.",
       "price": 7.80,
       "breed": "pierre",
-      "poids": 762000.0 ,
+      "weight": 762000.0 ,
       "quantity" : 1,
       "categorie": ["historique"],
       "image": [""] 
@@ -25,7 +25,7 @@
       "description": "La mystérieuse pierre de Londres, diamant jaune canari aux origines confidentielles. Cette pierre préservée des assauts nazis durant la guerre apportera une touche d'histoire secrète à votre collection.",
       "price": 60.0,
       "breed": "pierre",
-      "poids": 2.5 ,
+      "weight": 2.5 ,
       "quantity" : 1,
       "categorie": ["historique", "precieux"],
       "image": [""] 
@@ -35,7 +35,7 @@
       "description": "La mystérieuse Pierre Noire, témoin des origines de l'Islam et relique sacrée dissimulée au coeur de la Mecque. Son aura légendaire et son histoire remontant à Adam séduiront les collectors en quête de spiritualité et d'authenticité.",
       "price": 999.0,
       "breed": "pierre",
-      "poids": 0.0 ,
+      "weight": 0.0 ,
       "quantity" : 1,
       "categorie": ["historique", "sacré"],
       "image": [""] 
@@ -45,7 +45,7 @@
       "description": "La mystérieuse Pierre du Saint-Sépulcre, dévoilée pour la première fois après des siècles de contemplation. En touchant cette pierre sacrée où Jésus fut déposé, vous vivrez un moment d'histoire sainte et spirituelle unique.",
       "price": 999.0,
       "breed": "pierre",
-      "poids": 1000.0 ,
+      "weight": 1000.0 ,
       "quantity" : 1,
       "categorie": ["historique", "sacré"],
       "image": [""] 
@@ -55,7 +55,7 @@
       "description": "Découvrez le Gravier Signature, le nouvel accessoire de créateurs taillé dans le granit le plus rare. Avec son galbe parfaitement épuré, ce petit caillou saura apporter une touche de raffinement minimaliste à votre décoration.",
       "price": 3499.0,
       "breed": "pierre",
-      "poids": 0.5 ,
+      "weight": 0.5 ,
       "quantity" : 99,
       "categorie": ["permanente"],
       "image": [""] 
@@ -65,7 +65,7 @@
       "description": "Découvrez le Gravillon d'Exception. Ciselé dans une roche basaltique de Naples, ce galet premium de 12mm au galbe organique sublime avec élégance votre intérieur de manière naturelle et authentique.",
       "price": 2999.0,
       "breed": "pierre",
-      "poids": 5.0 ,
+      "weight": 5.0 ,
       "quantity" : 49,
       "categorie": ["permanente"],
       "image": [""] 
@@ -75,7 +75,7 @@
       "description": "Découvrez le Galet Unique, œuvre de calibrage aux courbes enveloppantes taillée dans un marbre de Carrare. Avec ses 3cm d'épure esthétique, apporte raffinement et sérénité à votre intérieur selon les principes du feng shui.",
       "price": 850.0,
       "breed": "caillou",
-      "poids": 13.5 ,
+      "weight": 13.5 ,
       "quantity" : 299,
       "categorie": ["permanente"],
       "image": [""] 
@@ -85,7 +85,7 @@
       "description": "Le Galet Maestro, taillé dans un bloc de slaté pour une courbe hydrodynamique optimale. Il vous fera briller auprès des ricocheteurs aguerris grâce à sa capacité de rebond maximisée sur l'eau calme ou agitée. Conçu pour les profesionnels.",
       "price": 850.0,
       "breed": "caillou",
-      "poids": 11.1 ,
+      "weight": 11.1 ,
       "quantity" : 299,
       "categorie": ["permanente", "sport"],
       "image": [""] 
@@ -95,7 +95,7 @@
       "description": "Découvrez le Galet de Ricochet, soigneusement sélectionné pour sa forme ovale propice aux ricochets réussis. Qu'importe votre niveau, vous vous émerveillerez de sa facilité à voguer élégamment sur les flots pour votre plus grand plaisir.",
       "price": 850.0,
       "breed": "caillou",
-      "poids": 10.0 ,
+      "weight": 10.0 ,
       "quantity" : 299,
       "categorie": ["permanente", "sport"],
       "image": [""] 
@@ -105,7 +105,7 @@
       "description": "Taillé dans un marbre résistant aux chocs, son galbe aérodynamique en fera l'accessoire indispensable de tout manifestant averti. Précision et portée optimisées pour faire passer votre message avec panache.",
       "price": 850.0,
       "breed": "caillou",
-      "poids": 2803.0 ,
+      "weight": 2803.0 ,
       "quantity" : 299,
       "categorie": ["permanente", "sport", "defense"],
       "image": [""] 
@@ -115,7 +115,7 @@
       "description":"Taillé dans un charbon de haute pression, son toucher lisse comme du diamant propulsera vos actions en manifestations au rang d'œuvre d'art plastique percutante.",
       "price":1199,
       "breed":"minerai",
-      "poids":800,
+      "weight":800,
       "quantity":25,
       "categorie":["sport","contemporain"],
       "image":""
@@ -125,7 +125,7 @@
       "description": "Légendaire rocher qui roula la mort, offrez-vous un frisson garantie à chaque manipulation de cette relique du cinéma.",
       "price": 6999,
       "breed": "granite",
-      "poids": 2500,
+      "weight": 2500,
       "quantity": 1,   
       "categorie": ["cult culture","collector"],
       "image": [""]
@@ -135,7 +135,7 @@
       "description": "Fragment mystérieux rapporté d'une exoplanète, cette pierre aux reflets cosmiques vous transportera au plus profond de l'univers.",
       "price": 12000,
       "breed": "météorite",
-      "poids": 75,
+      "weight": 75,
       "quantity": 3,   
       "categorie": ["science fiction","spirituel"], 
       "image": [""] 
@@ -145,7 +145,7 @@
       "description": "Cette améthyste vivifiante propulsera votre 6ème sens vers de nouveaux horizons psychiques.",
       "price": 4500,
       "breed": "cristal",
-      "poids": 210,
+      "weight": 210,
       "quantity": 15,
       "categorie": ["bien-être","spirituel"],
       "image": [""]
@@ -155,7 +155,7 @@
       "description": "Ce rubis ancestral éveillera en vous des vibrations telluriques prodigieuses.",  
       "price": 8999,
       "breed": "minerai précieux",
-      "poids": 7,
+      "weight": 7,
       "quantity": 5,
       "categorie": ["spiritualité","collector"],
       "image": [""]
@@ -165,7 +165,7 @@
       "description": "Ce diamant aux irisations inédites vous révélera les secrets du monde matériel.",
       "price": 35000, 
       "breed": "diamant",
-      "poids": 2,
+      "weight": 2,
       "quantity": 1,
       "categorie": ["science","collector"],
       "image": ""
@@ -175,7 +175,7 @@
       "description": "Ce saphir des origines aux éclats encore vierges vous transportera 7 milliards d'années en arrière.",
       "price": 25000,
        "breed": "cristal",
-      "poids": 12,
+      "weight": 12,
       "quantity": 3,
       "categorie": ["spirituel","collector"],
       "image": "" 
@@ -185,7 +185,7 @@
       "description": "L'émeraude légendaire d'un pharaon vous transmettra sa force inégalée.",
       "price": 15000,
       "breed": "minerai précieux", 
-      "poids": 45,
+      "weight": 45,
       "quantity": 1,
       "categorie": ["ésotérique","collector"],
       "image": ""
@@ -195,7 +195,7 @@
       "description": "Le diamant maudit du Titanic vous révélera ses mystères marins centenaires.",
       "price": 19999,
       "breed": "diamant",
-      "poids": 69, 
+      "weight": 69, 
       "quantity": 1,
       "categorie": ["historique","collector"],
       "image": ""
@@ -205,7 +205,7 @@
       "description": "Légendaire caillou à l'éternelle fraîcheur, Source inépuisable de sérénité.",
       "price": 3499,
       "breed": "granit",
-      "poids": 1500,
+      "weight": 1500,
       "quantity": 25,
       "categorie": ["bien-être", "zen"],
       "image": ""
