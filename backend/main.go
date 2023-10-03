@@ -18,10 +18,13 @@ func main() {
 	routes.SetupRoutes() // init each routes
 
     pebbles := LoadJSONPebbles()
-    fmt.Println("---pebbles---")
-    for _, p := range pebbles{
-        fmt.Printf("%d -> %s\n", p.ID, p.Title)
+
+    pebble_repo := repo.NewPebbleRepo()
+    fmt.Println("----pebbles----")
+    for _, pebble := range pebbles {
+        pebble_repo.InsertNewPebble(&pebble)
     }
+    fmt.Println("---------------")
 
 	// RUN
 	routes.Run(HOST) // run api
