@@ -167,115 +167,18 @@
       "breed": "diamant",
       "poids": 2,
       "quantity": 1,
-      "categorie": ["science","collector"],  {
-    "title": "Rocher piège Indiana Jones",  
-    "description": "Légendaire rocher qui roula la mort, offrez-vous un frisson garantie à chaque manipulation de cette relique du cinéma.",
-    "price": 6999,
-    "breed": "granite",
-    "poids": 2500,
-    "quantity": 1,   
-    "categorie": ["cult culture","collector"],
-    "image": ""
-  },
-
-  {   
-    "title": "Gemme de l'espace",
-    "description": "Fragment mystérieux rapporté d'une exoplanète, cette pierre aux reflets cosmiques vous transportera au plus profond de l'univers.",
-    "price": 12000,
-    "breed": "météorite",
-    "poids": 75,
-    "quantity": 3,   
-    "categorie": ["science fiction","spirituel"], 
-    "image": "" 
-  },
-
-  {
-    "title": "Gemme de l'esprit",  
-    "description": "Cette améthyste vivifiante propulsera votre 6ème sens vers de nouveaux horizons psychiques.",
-    "price": 4500,
-    "breed": "cristal",
-    "poids": 210,
-    "quantity": 15,
-    "categorie": ["bien-être","spirituel"],
-    "image": ""
-  },
-
-  {
-    "title": "Gemme de l'âme",
-    "description": "Ce rubis ancestral éveillera en vous des vibrations telluriques prodigieuses.",  
-    "price": 8999,
-    "breed": "minerai précieux",
-    "poids": 7,
-    "quantity": 5,
-    "categorie": ["spiritualité","collector"],
-    "image": ""
-  },
-
-  {
-    "title": "Gemme de la réalité",
-    "description": "Ce diamant aux irisations inédites vous révélera les secrets du monde matériel.",
-    "price": 35000, 
-    "breed": "diamant",
-    "poids": 2,
-    "quantity": 1,
-    "categorie": ["science","collector"],
-    "image": ""
-  },
-
-  {
-    "title": "Gemme du temps",
-    "description": "Ce saphir des origines aux éclats encore vierges vous transportera 7 milliards d'années en arrière.",
-    "price": 25000,
-    "breed": "cristal",
-    "poids": 12,
-    "quantity": 3,
-    "categorie": ["spirituel","collector"],
-    "image": "" 
-  },
-
-  {
-    "title": "Gemme du pouvoir",
-    "description": "L'émeraude légendaire d'un pharaon vous transmettra sa force inégalée.",
-    "price": 15000,
-    "breed": "minerai précieux", 
-    "poids": 45,
-    "quantity": 1,
-    "categorie": ["ésotérique","collector"],
-    "image": ""
-  },
-
-  {
-    "title": "Cœur de l'océan",
-    "description": "Le diamant maudit du Titanic vous révélera ses mystères marins centenaires.",
-    "price": 19999,
-    "breed": "diamant",
-    "poids": 69, 
-    "quantity": 1,
-    "categorie": ["historique","collector"],
-    "image": ""
-  },
-
-  {
-    "title": "La pierre qui roule mais n'amasse pas de mousse",
-    "description": "Légendaire caillou à l'éternelle fraîcheur, Source inépuisable de sérénité.",
-    "price": 3499,
-    "breed": "granit",
-    "poids": 1500,
-    "quantity": 25,
-    "categorie": ["bien-être", "zen"],
-    "image": ""
-  }
-      "image": [""]
+      "categorie": ["science","collector"],
+      "image": ""
     },
     {
       "title": "Gemme du temps",
       "description": "Ce saphir des origines aux éclats encore vierges vous transportera 7 milliards d'années en arrière.",
       "price": 25000,
-      "breed": "cristal",
+       "breed": "cristal",
       "poids": 12,
       "quantity": 3,
       "categorie": ["spirituel","collector"],
-      "image": [""] 
+      "image": "" 
     },
     {
       "title": "Gemme du pouvoir",
@@ -285,7 +188,7 @@
       "poids": 45,
       "quantity": 1,
       "categorie": ["ésotérique","collector"],
-      "image": [""]
+      "image": ""
     },
     {
       "title": "Cœur de l'océan",
@@ -295,7 +198,7 @@
       "poids": 69, 
       "quantity": 1,
       "categorie": ["historique","collector"],
-      "image": [""]
+      "image": ""
     },
     {
       "title": "La pierre qui roule mais n'amasse pas de mousse",
@@ -305,7 +208,7 @@
       "poids": 1500,
       "quantity": 25,
       "categorie": ["bien-être", "zen"],
-      "image": [""]
+      "image": ""
     }
   ]
 }
