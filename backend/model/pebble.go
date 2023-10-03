@@ -12,7 +12,8 @@ type Pebble struct {
 	Breed       string   `json:"breed"`
 	Quantity    int      `json:"quantity"`
 	Weight      float64  `json:"weight"`
-    Categories  []string `json:"categorie`
+    Categories  []string `json:"categorie"`
+    Photos      []string `json:"image"`
 }
 
 func (p Pebble) String() string {
