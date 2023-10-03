@@ -1,11 +1,11 @@
 package main
 
 import (
-    "encoding/json"
-    "io/ioutil"
-    "log"
+	"encoding/json"
+	"io/ioutil"
+	"log"
 
-    "prgc/model"
+	"prgc/model"
 )
 
 
@@ -34,9 +34,14 @@ func LoadJSONPebbles() []model.Pebble {
         new_pebble.Quantity = int(pebble["quantity"].(float64))
         new_pebble.Weight = pebble["weight"].(float64)
         new_pebble.Categories = []string{}
+        new_pebble.Photos = []string{}
 
         for _, cat := range pebble["categorie"].([]interface{}) {
             new_pebble.Categories = append(new_pebble.Categories, cat.(string))
+        }
+
+        for _, img := range pebble["image"].([]interface{}) {
+            new_pebble.Photos = append(new_pebble.Photos, img.(string))
         }
 
         pebbles = append(pebbles, new_pebble)

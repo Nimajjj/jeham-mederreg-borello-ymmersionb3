@@ -17,7 +17,6 @@ func NewPebbleRepo() *PebbleRepo {
 }
 
 func (pr *PebbleRepo) InsertNewPebble(pebble *model.Pebble) {
-    fmt.Print("try InsertNewPebble -> ", pebble.Title, "\n")
     var count int
     query := "SELECT COUNT(*) FROM pebbles WHERE title = ?"
     err := pr.db.QueryRow(query, pebble.Title).Scan(&count)
@@ -27,7 +26,8 @@ func (pr *PebbleRepo) InsertNewPebble(pebble *model.Pebble) {
 
     if count > 0 {
       // if pebble already exists in db return
-      return 
+        fmt.Print("try InsertNewPebble -> ", pebble.Title, " -> FAILED ALREADY EXISTS\n")
+        return 
     }
 
 
