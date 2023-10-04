@@ -17,7 +17,7 @@ header {
     margin-top: 2%;
     margin-left: 20%;
     margin-right: 2%;
-    gap: 5%;
+    gap: 10%;
 }
 
 .article_photo {
@@ -27,10 +27,6 @@ header {
     width : 80%;
 }
 
-.carac_paiement_space {
-    width: 20%;
-
-}
 
 .image-container {
     display: grid;
@@ -42,6 +38,12 @@ header {
 .grid-image-first {
     grid-column: span 2;
     background-color: #F2F2F4;
+    width: 100%;
+    height : 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .grid-image {
@@ -49,9 +51,9 @@ header {
     height: 250px;
     box-sizing: border-box;
     background-color: #F2F2F4;
-    display: flex; /* Utilisation de flexbox pour centrer */
-    justify-content: center; /* Centre horizontalement */
-    align-items: center; /* Centre verticalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 img.small-img {
@@ -63,10 +65,13 @@ img.small-img {
     position: relative;
 }
 
+.carousel-image:not(:first-child) {
+    display: none;
+}
+
 .carousel-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ajuste l'image pour remplir le conteneur */
+    width: 400px;
+    height: 400px;
 }
 
 .prev-button,
@@ -90,6 +95,11 @@ img.small-img {
 
 /* ESPACE CARACTERISTIQUE TITRE
  */
+
+.carac_paiement_space {
+    width: 20%;
+
+}
 
 h1 {
     font-size: 16px;
