@@ -179,8 +179,8 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
             query += "%'"
         }
     }
-
-
+    
+    // ensure to get only one row per pebble
     query += " GROUP BY p.id"
     query += defer_search_term
 
@@ -196,15 +196,16 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
         }
     }
 
-    fmt.Println("\n----\n", query, "\n----\n")
     
 
+    // run query
     rows, err := pr.db.Query(query)
     if err != nil {
         return nil, err
     }
     defer rows.Close()
 
+    // format response
     for rows.Next() {
         var pebble model.Pebble
         
@@ -225,9 +226,10 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
         pebbles = append(pebbles, pebble)
     }
 
-    // run query
-
-    fmt.Println("SearchPebbles SUCCESS ->")
-    fmt.Println(pebbles)
+    /*
+    fmt.Println("SearchPebbles SUCCESS")
+    fmt.Println("----Query----\n", query)
+    fmt.Println("----Result----\n", pebbles)
+    */
     return pebbles, nil
 }
