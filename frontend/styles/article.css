@@ -1,7 +1,18 @@
+header {
+    color: var(--black);
+}
+
+.Menu ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
 .content {
     display : flex;
-    width: 90%;
-    margin: auto;
+    width: 85%;
+    margin-top: 15%;
+    margin-left: 10%;
+    margin-right: 5%;
     gap: 5%;
 }
 
@@ -9,18 +20,101 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    width : 65%;
+    width : 45%;
 }
 
-.carac_Paiement_space {
+.carac_paiement_space {
     width: 35%;
+
 }
 
-.grid_content {
-    width : 100%;
-    height : auto;
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
 }
 
-.grid_content + .grid_content {
+.grid-image {
+    width: 100%;
+    background-color: #F2F2F4;
+}
+
+.grid-image img {
+    width: 75%;
+    height: auto;
+}
+
+
+.grid-image:nth-child(2n-1) {
     grid-column: span 2;
+}
+
+/* ESPACE CARACTERISTIQUE TITRE
+ */
+
+h1 {
+    font-size: 16px;
+    margin-bottom: 5%;
+}
+
+p {
+    padding: 0;
+    margin-bottom: 5%;
+}
+
+.article_title {
+    font-size: 11px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333 linear-gradient(to right, #ccc, #333, #ccc);
+    margin-bottom: 5%;
+}
+
+.price {
+    text-align-last: center;
+}
+
+/* Boutton panier & paypal
+ */
+
+.paiement_method  {
+    display: block;
+    text-align: center;
+}
+.button {
+    width : 100%;
+    border-radius: 70px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button {
+    border: none;
+    background: none;
+    color: white;
+}
+
+div.button {
+    height: 18px;
+}
+.add-basket {
+    background-color: #010101;
+    color: white;
+    margin-bottom : 5px;
+    height: 26px;
+
+
+}
+
+.payment-paypal {
+    background-color: white;
+    border: #010101 solid 1px;
+}
+
+img.logo-paypal {
+    height: 18px;
 }
