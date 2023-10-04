@@ -19,7 +19,6 @@
 * {
     margin: 0;
     padding: 0;
-
     font-family: CenturyRegular, Arial, sans-serif;
 }
 
@@ -28,7 +27,7 @@ header {
     position: sticky;
     top: 0;
     color: var(--white);
-    z-index: 1;
+    z-index: 3;
 
 }
 
@@ -141,7 +140,7 @@ h4 {
 .container_products {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
 }
 
@@ -164,8 +163,23 @@ h4 {
     justify-content: center;
     opacity: 1;
     z-index: 1;
-    /*space beetween product*/
     margin: 0 2px;
+}
+
+.rock_product_bigger {
+    background-image: url('../img/ben_pierre.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 6000px;
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: center;
+    opacity: 1;
+    z-index: 1;
+    margin: 0 40px;
 }
 
 .rock_hover {
@@ -178,31 +192,29 @@ h4 {
 .rock_product:hover {
     & img {
         opacity: 0;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 0.6s ease-in-out;
     }
 
     & .rock_hover {
         display: flex;
         opacity: 1;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 0.6s ease-in-out;
     }
 
     & .description_hover {
         display: flex;
         opacity: 1;
-        transition: opacity 1s ease-in-out;
+        transition: opacity 0.6s ease-in-out;
     }
 }
 
 .description_hover {
-    /* put on the same level of rock_product */
     opacity: 0;
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
     gap: 400px;
-
 }
 
 
@@ -273,4 +285,65 @@ input::placeholder {
     text-decoration: underline;
     text-decoration-color: var(--black);
     text-decoration-thickness: 1px;
+}
+
+.the-news {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 350px;
+    margin-top: 100px;
+}
+
+footer {
+    background-color: var(--greyz);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 400px;
+    padding: 100px;
+}
+
+footer h2 {
+    margin: 20px 0;
+}
+
+footer p {
+    margin: 20px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.footer_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.footer_social img {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+}
+
+.footer_txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
 }

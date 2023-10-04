@@ -15,8 +15,8 @@ func NewCategorieRepo() *CategorieRepo {
 }
 
 
-func (cr *CategorieRepo) InsertNewCategorie(categorie_title string) {
-    fmt.Print("try InsertNewCategorie -> ", categorie_title)
+func (cr *CategorieRepo) InsertNewCategorie(categorie_title string, pebble_id int) {
+    fmt.Print("try InsertNewCategorie -> ", categorie_title, "::", pebble_id)
 
     var count int
     query := "SELECT COUNT(*) FROM categories WHERE title = ?"
@@ -25,19 +25,32 @@ func (cr *CategorieRepo) InsertNewCategorie(categorie_title string) {
       panic(err)
     }
 
-    if count > 0 {
-        fmt.Print(" -> FAILED: ALREADY EXISTS\n")
-      // categorie already exists
-      return 
+    if count == 0 {
+        // categorie does not exist, insert
+        query = "INSERT INTO categories (title) VALUES (?);"
+        _, err = cr.db.Exec(query, categorie_title)
+        if err != nil {
+          panic(err) 
+        }
+        fmt.Print(" -> INSERT SUCCESS")
+    } else {
+        fmt.Print(" -> INSERT FAILED: ALREADY EXISTS")
     }
 
-    // categorie does not exist, insert
-    query = "INSERT INTO categories (title) VALUES (?);"
+    // get categorie id
+    query = "SELECT ID FROM categories WHERE Title = ?"
+    var id int
+    err = cr.db.QueryRow(query, categorie_title).Scan(&id)
+    if err != nil {
+      panic(err)
+    }
 
-    _, err = cr.db.Exec(query, categorie_title)
+    // link categoreie to pebble
+    query = "INSERT INTO pebbles_categories (ID_Pebble, ID_Categorie) VALUES (?, ?);"
+    _, err = cr.db.Exec(query, pebble_id, id)
     if err != nil {
       panic(err) 
     }
     
-    fmt.Print(" -> SUCCESS\n")
+    fmt.Print(" -> LINK PEBBLE SUCCESS\n")
 }
