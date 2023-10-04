@@ -8,6 +8,7 @@ import (
 )
 
 const HOST = "localhost:8080"
+const LOAD_JSON = false
 
 func main() {
 	// INIT
@@ -18,13 +19,15 @@ func main() {
 	routes.SetupRoutes() // init each routes
 
     pebbles := LoadJSONPebbles()
-
-    pebble_repo := repo.NewPebbleRepo()
-    fmt.Println("----pebbles----")
-    for _, pebble := range pebbles {
-        pebble_repo.InsertNewPebble(&pebble)
+    
+    if (LOAD_JSON) {
+        pebble_repo := repo.NewPebbleRepo()
+        fmt.Println("----pebbles----")
+        for _, pebble := range pebbles {
+            pebble_repo.InsertNewPebble(&pebble)
+        }
+        fmt.Println("---------------")
     }
-    fmt.Println("---------------")
 
 	// RUN
 	routes.Run(HOST) // run api

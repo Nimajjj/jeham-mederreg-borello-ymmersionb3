@@ -14,6 +14,8 @@ type Pebble struct {
 	Weight      float64  `json:"weight"`
     Categories  []string `json:"categorie"`
     Photos      []string `json:"image"`
+
+    Creation    string
 }
 
 func (p Pebble) String() string {

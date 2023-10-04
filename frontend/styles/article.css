@@ -1,7 +1,22 @@
+html, body {
+    overflow-x: hidden;
+}
+
+header {
+    color: var(--black);
+}
+
+.Menu ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
 .content {
     display : flex;
-    width: 90%;
-    margin: auto;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 2%;
     gap: 5%;
 }
 
@@ -9,18 +24,155 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    width : 65%;
+    width : 60%;
 }
 
-.carac_Paiement_space {
-    width: 35%;
+.carac_paiement_space {
+    width: 20%;
+
 }
 
-.grid_content {
-    width : 100%;
-    height : auto;
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
 }
 
-.grid_content + .grid_content {
+.grid-image {
+    width: 100%;
+    background-color: #F2F2F4;
+}
+
+.grid-image img {
+    width: 75%;
+    height: auto;
+}
+
+
+.grid-image:nth-child(2n-1) {
     grid-column: span 2;
+}
+
+/* ESPACE CARACTERISTIQUE TITRE
+ */
+
+h1 {
+    font-size: 16px;
+    margin-bottom: 5%;
+}
+
+p {
+    padding: 0;
+    margin-bottom: 5%;
+}
+
+.article_title {
+    font-size: 11px;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #333 linear-gradient(to right, #ccc, #333, #ccc);
+    margin-bottom: 5%;
+}
+
+.price {
+    text-align-last: center;
+}
+
+/* Boutton panier & paypal
+ */
+
+.paiement_method  {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+.button {
+    width : 90%;
+    border-radius: 100px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button {
+    border: none;
+    background: none;
+    color: white;
+}
+
+div.add-basket.button {
+    height: 20px;
+    width: 100%;
+}
+
+div.payment-paypal.button {
+    height: 18px;
+    width: 100%;
+}
+.add-basket {
+    background-color: #010101;
+    color: white;
+    margin-bottom : 5px;
+    height: 35px;
+}
+
+.payment-paypal {
+    background-color: white;
+    border: #010101 solid 1px;
+}
+
+img.logo-paypal {
+    height: 15px;
+}
+
+.cond-general {
+    margin: 10%;
+    font-size: 10px;
+}
+
+/* BLOCK CONTACT
+ */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 8%;
+    border : solid 0.5px rgba(0, 0, 0, 0.4);
+    padding : 20px;
+}
+
+.icon {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.icon-line {
+    height: 2vh;
+}
+
+p.icon-line {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* DESCRIPTION
+ */
+
+
+.description {
+    width: 100%;
+    height: auto;
+    border: none;
+    background-color: #F2F2F4;
+    padding: 20px;
+}
+p.paragraph {
+    font-size: 12px;
 }
