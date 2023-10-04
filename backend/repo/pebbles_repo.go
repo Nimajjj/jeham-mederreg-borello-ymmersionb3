@@ -119,6 +119,7 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
             INNER JOIN categories c ON pc.id_categorie = c.id`
 
     // apply categories filters
+    var defer_search_term string
     if (search.Flags & CATEGORIES != 0) {
         count := len(search.Categories)
         if (count == 1) {
@@ -141,8 +142,8 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
             }
 
             // defer this
-            query += " HAVING COUNT(DISTINCT c.Title) = "
-            query += strconv.Itoa(len(search.Categories))
+            defer_search_term += " HAVING COUNT(DISTINCT c.Title) = "
+            defer_search_term += strconv.Itoa(len(search.Categories))
         }
     }
 
@@ -150,7 +151,11 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
     if (search.Flags & KEYWORD != 0) {
         for i, keyword := range strings.Split(search.Keywords, " "){
             if (i == 0) {
-                query += " WHERE "
+                if (strings.Contains(query, "WHERE")) {
+                    query += " OR "
+                } else {
+                    query += " WHERE "
+                }
             }
 
             if (i < len(search.Keywords) && i != 0) {
@@ -175,6 +180,10 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
         }
     }
 
+
+    query += " GROUP BY p.id"
+    query += defer_search_term
+
     // apply order (last one)
     if (search.Flags & ORDER != 0) {
         switch search.Order {
@@ -186,8 +195,6 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
             fmt.Println("Incorect ORDER flag")
         }
     }
-
-    query += " GROUP BY p.id"
 
     fmt.Println("\n----\n", query, "\n----\n")
     
