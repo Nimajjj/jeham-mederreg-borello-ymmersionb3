@@ -74,7 +74,7 @@ header h1 {
     align-items: flex-start;
 }
 .logo_class {
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .video video {
@@ -216,7 +216,7 @@ h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 6000px;
+    width: inherit;
     height: 1000px;
     display: flex;
     align-items: center;
