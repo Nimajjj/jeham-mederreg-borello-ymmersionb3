@@ -74,7 +74,7 @@ header h1 {
     align-items: flex-start;
 }
 .logo_class {
-    margin-left: 20px;
+    margin-left: 60px;
 }
 
 .video video {
@@ -168,53 +168,7 @@ h4 {
     z-index: 1;
     margin: 0 2px;
 }
-.rock_product2 {
-    background-size: cover;
-    background-image: url(../img/zen.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: inherit;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    justify-content: flex-end;
-    opacity: 1;
-    z-index: 1;
-    margin: 0 2px;
-}
 
-.rock_product3 {
-    background-size: cover;
-    background-image: url(../img/plate.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: inherit;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    justify-content: flex-end;
-    opacity: 1;
-    z-index: 1;
-    margin: 0 2px;
-}
-
-.rock_product4 {
-    background-size: cover;
-    background-image: url(../img/gravehaut.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    width: inherit;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    justify-content: flex-end;
-    opacity: 1;
-    z-index: 1;
-    margin: 0 2px;
-}
 .rock_product5 {
     background-size: cover;
     background-image: url(../img/meteorite.png);
@@ -262,7 +216,7 @@ h4 {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 6000px;
+    width: inherit;
     height: 1000px;
     display: flex;
     align-items: center;
@@ -273,51 +227,152 @@ h4 {
     margin: 0 40px;
 }
 
-.rock_hover {
-    position: absolute;
-    z-index: 0;
+/************ROCK PRODUCT START***************/
+.rock_product {
+    background-size: cover;
+    background-image: url(../img/brille.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: inherit;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: flex-end;
+    opacity: 1;
+    z-index: 1;
+    margin: 0 2px;
+    transition: background-image 0.6s ease-in-out;
+}
+
+.description_hover {
     opacity: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+    transition: opacity 0.6s ease-in-out;
 }
 
-.rock_product:hover {
-    & .description_hover {
-        display: flex;
-        opacity: 1;
-        transition: opacity 0.6s ease-in-out;
-    }
+.rock_product:hover  {
     background-image: url("../img/brilledos.png");
+}
+
+.rock_product:hover > .description_hover  {
+    opacity: 1;
+}
+/***********ROCK PRODUCT 2 END*****************/
+/************ROCK PRODUCT 2 START***************/
+.rock_product2 {
+    background-size: cover;
+    background-image: url(../img/zen.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: inherit;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: flex-end;
+    opacity: 1;
+    z-index: 1;
+    margin: 0 2px;
     transition: background-image 0.6s ease-in-out;
 }
 
-.rock_product2:hover{
-    &.description_hover {
-        display: flex;
-        opacity: 1;
-        transition: opacity 0.6s ease-in-out;
-    }
+.description_hover2 {
+    opacity: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.rock_product2:hover  {
     background-image: url("../img/zenhaut.png");
+}
+
+.rock_product2:hover > .description_hover2  {
+    opacity: 1;
+}
+/***********ROCK PRODUCT 2 END*****************/
+
+/************ROCK PRODUCT 3 START***************/
+.rock_product3 {
+    background-size: cover;
+    background-image: url(../img/plate.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: inherit;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: flex-end;
+    opacity: 1;
+    z-index: 1;
+    margin: 0 2px;
     transition: background-image 0.6s ease-in-out;
 }
 
-.rock_product3:hover {
-    &.description_hover {
-        display: flex;
-        opacity: 1;
-        transition: opacity 0.6s ease-in-out;
-    }
+.description_hover3 {
+    opacity: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.rock_product3:hover  {
     background-image: url("../img/platehaut.png");
+}
+
+.rock_product3:hover > .description_hover3  {
+    opacity: 1;
+}
+/***********ROCK PRODUCT 3 END*****************/
+
+/************ROCK PRODUCT 4 START***************/
+.rock_product4 {
+    background-size: cover;
+    background-image: url(../img/gravehaut.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: inherit;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    justify-content: flex-end;
+    opacity: 1;
+    z-index: 1;
+    margin: 0 2px;
     transition: background-image 0.6s ease-in-out;
 }
 
-.rock_product4:hover {
-    &.description_hover {
-        display: flex;
-        opacity: 1;
-        transition: opacity 0.6s ease-in-out;
-    }
-    background-image: url("../img/grave.png");
-    transition: background-image 0.6s ease-in-out;
+.description_hover4 {
+    opacity: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    gap: 400px;
+    transition: opacity 0.6s ease-in-out;
 }
+
+.rock_product4:hover  {
+    background-image: url("../img/grave.png");
+}
+
+.rock_product4:hover > .description_hover4  {
+    opacity: 1;
+}
+/***********ROCK PRODUCT 4 END*****************/
 
 .rock_product5:hover {
     &.description_hover {
@@ -339,14 +394,6 @@ h4 {
     transition: background-image 0.6s ease-in-out;
 }
 
-.description_hover {
-    opacity: 0;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    align-items: center;
-    gap: 400px;
-}
 
 img {
     width: 200px;
