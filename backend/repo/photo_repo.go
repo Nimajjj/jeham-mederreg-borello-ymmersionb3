@@ -53,3 +53,30 @@ func (pr *PhotoRepo) InsertNewPhoto(photo_path string, pebble_id int) {
 
     fmt.Print(" -> SUCCESS\n")
 }
+
+
+func (pr *PhotoRepo) GetPhotosForPebble(pebble_id int) ([]string, error) {
+    var photos []string
+
+    query := `SELECT p.filepath 
+                FROM pebbles_photos pp
+                JOIN photos p ON p.id = pp.id_photo
+                WHERE pp.id_pebble = ?`
+
+    rows, err := pr.db.Query(query, pebble_id)
+    if err != nil {
+        return nil, err
+    }
+    defer rows.Close()
+
+    for rows.Next() {
+        var photo string
+        err := rows.Scan(&photo)
+        if err != nil {
+            return nil, err
+        }
+        photos = append(photos, photo)
+    }
+
+    return photos, nil
+}

@@ -54,3 +54,27 @@ func (cr *CategorieRepo) InsertNewCategorie(categorie_title string, pebble_id in
     
     fmt.Print(" -> LINK PEBBLE SUCCESS\n")
 }
+
+func (cr *CategorieRepo) GetCategoriesForPebble(pebble_id int) ([]string, error) {
+    var categories []string
+    query := `SELECT c.title
+                FROM pebbles_categories pc
+                JOIN categories c ON c.id = pc.id_categorie 
+                WHERE pc.id_pebble = ?`
+
+    rows, err := cr.db.Query(query, pebble_id)
+    if err != nil {
+        return nil, err
+    }
+    defer rows.Close()
+
+    for rows.Next() {
+        var category string
+        err := rows.Scan(&category)
+        if err != nil {
+            return nil, err
+        }
+        categories = append(categories, category)
+    }
+    return categories, nil
+}
