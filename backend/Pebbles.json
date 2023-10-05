@@ -8,7 +8,7 @@
       "weight": 21.12,
       "quantity" : 1,
       "categorie": ["historique", "precieux", "maudit"],
-      "image": ["kohinor1.png", "kohinoor2.png"]
+      "image": ["kohinor1.png", "kohinoor2.png", "pierre-kohinoor3.png"]
     },
     {
       "title": "Pierre de Rosette",
@@ -59,7 +59,7 @@
       "weight": 5.0 ,
       "quantity" : 49,
       "categorie": ["permanente"],
-      "image": ["image_gravillon.png", "photo-gravillon2.png"]
+      "image": ["image_gravillon.png", "photo-gravillon2.png", "gravillon-4.png"]
     },
     {
       "title": "Gallet Unique",
@@ -69,7 +69,7 @@
       "weight": 13.5 ,
       "quantity" : 299,
       "categorie": ["permanente"],
-      "image": ["imgy.png", "imgu.png"] 
+      "image": ["image-cailloux-quatre.png", "image-cailloux-3.png", "image-11.png"]
     },
     {
       "title": "Gallet Maestro",
@@ -119,7 +119,7 @@
       "weight": 2500,
       "quantity": 1,   
       "categorie": ["cult culture","collector"],
-      "image": ["indianajones.png", "photo_indianajones.jpg"]
+      "image": ["indianajones.png", "photo_indianajones.jpg", "indianajones2.png"]
     },
     {   
       "title": "Gemme de l'espace",
@@ -139,7 +139,7 @@
       "weight": 210,
       "quantity": 15,
       "categorie": ["bien-être","spirituel"],
-      "image": ["pierre-esprit.png", "pierre-esprit2.png", "pierresinfinity.png"]
+      "image": ["pierre-esprit.png", "pierre-esprit2.png", "pierresinfinity2.png"]
     },
     {
       "title": "Gemme de l'âme",
@@ -149,7 +149,7 @@
       "weight": 7,
       "quantity": 5,
       "categorie": ["spiritualité","collector"],
-      "image": ["pierre-ame2.png", "pierre-ame.png", "pierresinfinity.png"]
+      "image": ["pierre-ame2.png", "pierre-ame.png", "pierresinfinity3.png"]
     },
     {
       "title": "Gemme de la réalité",
@@ -159,7 +159,7 @@
       "weight": 2,
       "quantity": 1,
       "categorie": ["science","collector"],
-      "image":["pierre-realite.png", "pierre-realite2.png", "pierresinfinity.png"]
+      "image":["pierre-realite.png", "pierre-realite2.png", "pierresinfinity4.png"]
     },
     {
       "title": "Gemme du temps",
@@ -169,7 +169,7 @@
       "weight": 12,
       "quantity": 3,
       "categorie": ["spirituel","collector"],
-      "image":["pierre-temps.png", "pierre-temps2.png", "pierresinfinity.png"]
+      "image":["pierre-temps.png", "pierre-temps2.png", "pierresinfinity5.png"]
     },
     {
       "title": "Gemme du pouvoir",
@@ -179,7 +179,7 @@
       "weight": 45,
       "quantity": 1,
       "categorie": ["ésotérique","collector"],
-      "image":["pierre-pouvoir.png", "pierre-pouvoir2.png", "pierresinfinity.png"]
+      "image":["pierre-pouvoir.png", "pierre-pouvoir2.png", "pierresinfinity6.png"]
     },
     {
       "title": "Cœur de l'océan",
