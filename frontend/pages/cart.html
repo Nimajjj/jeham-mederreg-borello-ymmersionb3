@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/cart.css">
     <script defer src="../scripts/cart.js"></script>
     <script defer src="../scripts/api_cart.js"></script>
+    <script defer src="../scripts/address_cart.js"></script>
 </head>
 <body>
 <header>
@@ -56,6 +57,10 @@
         <p id="somme-totale" class="price"> </p>
       </div>
       <hr />
+        <input id="myInput" type="text" name="myInput" value="" autocomplete="off" placeholder="Votre adresse...">
+                            <select id="location-completion">
+                                <option value="placeholder">adresse...</option>
+                            </select>
       <div class="paiement_method">
         <div class="add-basket button"><button>Réglement</button></div>
         <div class="payment-paypal button"><button><img class="logo-paypal" src="../img/logo_paypal.png" alt="logo paypal"></button></div>
