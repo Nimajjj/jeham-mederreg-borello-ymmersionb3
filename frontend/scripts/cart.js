@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+    return
+    // deso :(
 
     var elements = document.querySelectorAll(".price-product");
 

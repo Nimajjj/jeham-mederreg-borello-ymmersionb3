@@ -1,5 +1,6 @@
 // get pebble id
 const url_params = new URLSearchParams(window.location.search);
+let cart_id
 
 const container = document.querySelector("#shopping_cart")
 
@@ -52,12 +53,14 @@ function apply_cart(cart) {
         const addBt = document.createElement("a")
         addBt.innerHTML = "(+)"
         addBt.href = "#"
+        addBt.addEventListener("click",  () => increase_item_qt(cart.ID, product.ID))
         div.appendChild(addBt);
         
         // TODO(nmj): add href to script to decrease item from cart
         const lessBt = document.createElement("a")
         lessBt.innerHTML = "(-)<br>"
         lessBt.href = "#"
+        lessBt.addEventListener("click",  () => decrease_item_qt(cart.ID, product.ID))
         div.appendChild(lessBt);
 
         const deleteBt = document.createElement("a")
@@ -72,7 +75,17 @@ function apply_cart(cart) {
     })
 
     // TODO(nmj): remove laurie's script for total
-    document.querySelector("#somme-total").innerHTML = summ + " €"
+    document.querySelector("#somme-totale").innerHTML = summ + " €"
+}
+
+async function increase_item_qt(id_user, id_item) {
+    const url = `http://localhost:8080/cart/add/${id_user}/${id_item}/1`
+    fetch(url).then(() => location.reload())
+}
+
+async function decrease_item_qt(id_user, id_item) {
+    const url = `http://localhost:8080/cart/add/${id_user}/${id_item}/-1`
+    fetch(url).then(() => location.reload())
 }
 
 // call api
@@ -89,6 +102,7 @@ async function get_cart_data(id) {
 // call api caller
 url_params.forEach( async (value, key) => {
     if (key == "id") {
+        cart_id = value
         await get_cart_data(value)
     }
 });
