@@ -311,3 +311,16 @@ p {
     flex-direction: row;
     margin: 20px 0;
 }
+
+/* SEARCH BAR */
+
+.search {
+    display: flex;
+    width: auto;
+    justify-content: center;
+}
+
+.search input {
+    margin : 0;
+    width: 230px;
+}
