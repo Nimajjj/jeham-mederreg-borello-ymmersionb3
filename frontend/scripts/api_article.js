@@ -13,6 +13,16 @@ const img1 = document.querySelector("#img1")
 const imgs2 = document.querySelectorAll(".img2")
 const imgs3 = document.querySelectorAll(".img3")
 
+const addBt = document.querySelector("#add-cart")
+
+const CART_ID = 1
+let product_id
+
+addBt.addEventListener("click",  () => add_to_cart(CART_ID, product_id))
+async function add_to_cart(id_user, id_item) {
+    const url = `http://localhost:8080/cart/add/${id_user}/${id_item}/1`
+    fetch(url).then(() => location.reload())
+}
 
 // call api
 async function get_pebble_data(id) {
@@ -67,6 +77,7 @@ function apply_pebble(pebble) {
 // call api caller
 url_params.forEach( async (value, key) => {
     if (key == "id") {
+        product_id = value
         await get_pebble_data(value)
     }
 });
