@@ -5,7 +5,7 @@ const input = document.getElementById("myInput")
 
 input.oninput = () => {
     const url = `https://api.locationiq.com/v1/autocomplete?key=${locationIQKey}&q=${input.value}&limit=5&dedupe=1`;
-    const response = getAutocompleteResults(url)
+    const response = await getAutocompleteResults(url)
     console.log(response)
 }
 
@@ -14,3 +14,15 @@ async function getAutocompleteResults(url) {
   const response = await fetch(url);
   return response.json();
 }
+
+async function getCaillou(id) {
+    let uurl = `localhost:8080/pebble/${id}`
+    console.log(uurl)
+    const response = await fetch(uurl);
+    return response.json()
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+urlParams.forEach((pebble_id, c) => {
+    console.log(await getCaillou(pebble_id))
+});
