@@ -1,0 +1,215 @@
+/* GLOBALITÉ
+ */
+
+
+html, body {
+    overflow-x: hidden;
+    overflow-y : hidden;
+
+}
+
+header {
+    color: var(--black);
+}
+
+p {
+    padding : 0;
+    margin : 0;
+}
+.Menu ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+a.delete {
+    text-decoration: none;
+    cursor: pointer ;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 3px;
+    font-size: 10px;
+
+}
+
+.contain {
+    margin : 0;
+    width : 100%;
+    padding: 0;
+    heigth : 100%;
+    background-color: var(--greyz);
+    display: flex;
+
+}
+
+/* COTÉ PHOTO
+ */
+
+.photography {
+    width: 75%;
+    height: 100%;
+}
+
+img.ben-photo {
+    object-fit: contain;
+    width: 100%;
+    height: 105%;
+}
+
+/* COTÉ PANIER */
+
+
+.cart-shop {
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    gap : 3px;
+    width: 20%;
+    margin-right:5%;
+    overflow-y: auto;
+    height: 770px ;
+    max-height: 780px;
+}
+
+
+h1 {
+    font-family: "CenturyRegular", serif;
+    font-size: 20px;
+    padding: 5px;
+
+
+}
+
+.article {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ensemble-produit {
+    display: flex;
+    flex-direction: row;
+}
+img.photo {
+    width: 145px;
+    height: 145px;
+    padding: 8px;
+}
+
+.text {
+    align-self: center;
+    font-style: italic;
+    font-size: 12px;
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 2%;
+}
+
+img.logo-paypal {
+    width: 10%;
+}
+
+div.payment-paypal.button {
+    height: 18px;
+    width: 100%;
+}
+
+.total-amount {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+}
+
+.price {
+    font-weight: bold;
+}
+
+div.euros {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Boutton panier & paypal
+ */
+
+.paiement_method  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width : 100%
+}
+.button {
+    width : 90%;
+    border-radius: 100px;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button {
+    border: none;
+    background: none;
+    color: white;
+}
+
+.button {
+    transition: all .5s ease;
+    color: #fff;
+    border: 3px solid white;
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+    outline: none;
+    border-radius: 60px;
+}
+.payment-paypal:hover {
+    color: #F2F2F4;
+    background-color: #F2F2F4;
+}
+
+.add-basket:hover {
+    color: #F2F2F4;
+    background-color: #333333;
+}
+
+div.add-basket.button {
+    height: 20px;
+    width: 100%;
+}
+
+div.payment-paypal.button {
+    height: 18px;
+    width: 100%;
+    margin-bottom: 2%;
+}
+.add-basket {
+    background-color: #010101;
+    color: white;
+    margin-bottom : 5px;
+    height: 35px;
+}
+
+.payment-paypal {
+    background-color: white;
+    border: #010101 solid 1px;
+}
+
+img.logo-paypal {
+    width: 60px;
+    height: auto;
+}
+
+/* paiement part */
+
+div.total-part {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
