@@ -77,6 +77,9 @@ func (pr *PebbleRepo) GetPebbleById(id int) (model.Pebble, error) {
     err := pr.db.QueryRow(query, id).Scan(&pebble.Title, &pebble.Description, &pebble.Price, &pebble.Breed, &pebble.Weight, &pebble.Quantity)
     if err != nil {
         fmt.Println("ERROR while requesting pebble from DB")
+        fmt.Print(query)
+        fmt.Print("  id = ")
+        fmt.Println(id)
         panic(err)
     }
 
@@ -97,6 +100,7 @@ func (pr *PebbleRepo) GetPebbleById(id int) (model.Pebble, error) {
     }
 
     fmt.Println("GetPebbleById SUCCESS -> ", pebble)
+    pebble.ID = id
     return pebble, nil
 }
 
