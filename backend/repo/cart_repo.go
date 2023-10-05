@@ -26,7 +26,7 @@ func (cr *CartRepo) SelectCartFromUser(user_id int) model.Cart {
         panic(err)
     }
 
-    query = "SELECT ID_Caillou, Quantity FROM pebbles_cart WHERE ID_Basket = ?"
+    query = "SELECT ID_Caillou, Quantity FROM pebbles_cart WHERE ID_Basket = ? ORDER BY ID_Caillou ASC"
     rows, err := cr.db.Query(query, cart.ID)
     if (err != nil) {
         fmt.Println("ERROR while requesting pebbles_cart from DB")
