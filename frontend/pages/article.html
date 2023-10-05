@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../styles/frontpage.css">
     <link rel="stylesheet" href="../styles/article.css">
     <script defer src="../scripts/article.js"></script>
+    <script defer src="../scripts/api_article.js"></script>
 </head>
 
 <body>
@@ -42,28 +43,28 @@
     <div class="image-container">
         <div class="grid-image-first">
             <div class="carousel">
-                <img src="../img/image-cailloux-deux.png" class="carousel-image" alt="Image 1">
-                <img src="../img/image-galets.png" class="carousel-image" alt="Image 2">
-                <img src="../img/image-pierres.png" class="carousel-image" alt="Image 3">
+                <img id="img1" src="../img/image-cailloux-deux.png" class="carousel-image" alt="Image 1">
+                <img class="img2" src="../img/image-galets.png" class="carousel-image" alt="Image 2">
+                <img class="img3" src="../img/image-pierres.png" class="carousel-image" alt="Image 3">
                 <button class="prev-button">&lt;</button>
                 <button class="next-button">&gt;</button>
             </div>
         </div>
         <div class="grid-image">
-            <img class="small-img" src="../img/image-12.png" alt="Image 4">
+            <img class="small-img img2" src="../img/image-12.png" alt="Image 4">
         </div>
         <div class="grid-image">
-            <img class="small-img" src="../img/image-cailloux-trois.png" alt="Image 5">
+            <img class="small-img img3" src="../img/image-cailloux-trois.png" alt="Image 5">
         </div>
     </div>
     <div class="carac_paiement_space">
         <div class="article_title">
-            <p>PETIT ROCHER ESSENTIALS</p>
-            <h1>ROCHER BASIQUE PETIT ROCHER ET GROS CAILLOUX </h1>
-            <p>PIERRE BASIQUE GRISE</p>
-            <p>Référence : 1DRTFREHYUS</p>
+            <p id="pebble_categorie">PETIT ROCHER ESSENTIALS</p>
+            <h1 id="pebble_title">ROCHER BASIQUE PETIT ROCHER ET GROS CAILLOUX </h1>
+            <p id="pebble_breed">PIERRE BASIQUE GRISE</p>
+            <p id="pebble_reference">Référence : 1DRTFREHYUS</p>
             <hr />
-            <p class="price">3500€</p>
+            <p id="pebble_price" class="price">3500€</p>
         </div>
         <div class="paiement_method">
             <div class="add-basket button"><button>Ajouter au panier</button></div>
@@ -79,7 +80,7 @@
         <div class="description">
             <h1>DESCRIPTION</h1>
             <div class="description-text">
-                <p class="paragraph">Le cailloux met a l’honneur l’emblematique motif a quatres couleur de la marque.
+                <p id="pebble_description" class="paragraph">Le cailloux met a l’honneur l’emblematique motif a quatres couleur de la marque.
 
                     Confectionnée en pierre véritable, elles affichent une coupe intemporelle et agréable à porter.
 
