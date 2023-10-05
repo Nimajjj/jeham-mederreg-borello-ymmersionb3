@@ -129,7 +129,7 @@
       "weight": 75,
       "quantity": 3,   
       "categorie": ["science fiction","spirituel"], 
-      "image": ["imgk.png", "imgl.png"] 
+      "image": ["../frontend/img/img-json/pierre-espace.png", "../frontend/img/img-json/pierre-espace2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme de l'esprit",  
@@ -139,7 +139,7 @@
       "weight": 210,
       "quantity": 15,
       "categorie": ["bien-être","spirituel"],
-      "image": ["imgz.png", "imgx.png"]
+      "image": ["../frontend/img/img-json/pierre-esprit.png", "../frontend/img/img-json/pierre-esprit2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme de l'âme",
@@ -149,7 +149,7 @@
       "weight": 7,
       "quantity": 5,
       "categorie": ["spiritualité","collector"],
-      "image": ["imgc.png", "imgv.png"]
+      "image": ["../frontend/img/img-json/pierre-ame2.png", "../frontend/img/img-json/pierre-ame.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme de la réalité",
@@ -159,7 +159,7 @@
       "weight": 2,
       "quantity": 1,
       "categorie": ["science","collector"],
-      "image":["imgb.png", "imgn.png"]
+      "image":["../frontend/img/img-json/pierre-realite.png", "../frontend/img/img-json/pierre-realite2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme du temps",
@@ -169,7 +169,7 @@
       "weight": 12,
       "quantity": 3,
       "categorie": ["spirituel","collector"],
-      "image":["img11.png", "img12.png"] 
+      "image":["../frontend/img/img-json/pierre-temps.png", "../frontend/img/img-json/pierre-temps2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme du pouvoir",
@@ -179,7 +179,7 @@
       "weight": 45,
       "quantity": 1,
       "categorie": ["ésotérique","collector"],
-      "image":["img111.png", "img112.png"]
+      "image":["../frontend/img/img-json/pierre-pouvoir.png", "../frontend/img/img-json/pierre-pouvoir2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Cœur de l'océan",
@@ -189,7 +189,7 @@
       "weight": 69, 
       "quantity": 1,
       "categorie": ["historique","collector"],
-      "image":["img21.png", "img22.png"]
+      "image":["../frontend/img/img-json/pierre_titanic.png", "../frontend/img/img-json/pierre-titanic.png", "../frontend/img/img-json/pierre-titanic2.png"]
     },
     {
       "title": "La pierre qui roule mais n'amasse pas de mousse",
@@ -199,7 +199,7 @@
       "weight": 1500,
       "quantity": 25,
       "categorie": ["bien-être", "zen"],
-      "image":["img221.png", "img222.png"]
+      "image":["../frontend/img/img-json/image_mousse.png", "../frontend/img/img-json/mousse2.png", "../frontend/img/img-json/mousse-3.png"]
     }
   ]
 }
