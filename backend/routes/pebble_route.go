@@ -32,6 +32,9 @@ func getPebble(ctx *gin.Context) {
         ctx.IndentedJSON(http.StatusNotFound, errors.New("Unknown pebble id"))
         return
     }
+
+    ctx.Header("Access-Control-Allow-Origin", "*")
+    ctx.Header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS")
     ctx.IndentedJSON(http.StatusOK, pebble)
 }
 
