@@ -1,7 +1,6 @@
 package routes
 
 import (
-	"fmt"
 	"net/http"
 	"prgc/model"
 	"prgc/repo"
@@ -12,12 +11,13 @@ import (
 
 // routes functions
 func getUserCart(ctx *gin.Context) {
-    user_id := ctx.Param("user")
-    fmt.Println(user_id)
+    user_id, err := strconv.Atoi(ctx.Param("user"))
+    testErr(err)
 
-    
+    cart_repo := repo.NewCartRepo()
+    cart := cart_repo.SelectCartFromUser(user_id)
 
-    ctx.IndentedJSON(http.StatusOK, nil)
+    ctx.IndentedJSON(http.StatusOK, cart.JsonCompatible())
 }
 
 
