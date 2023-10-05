@@ -29,7 +29,7 @@
       "weight": 0.0 ,
       "quantity" : 1,
       "categorie": ["historique", "sacré"],
-      "image": ["img7.png", "img8.png"] 
+      "image": ["../frontend/img/img-json/pierrenoire1.png", "../frontend/img/img-json/pierrenoire2.png", "../frontend/img/img-json/pierrenoire3.png"]
     },
     {
       "title": "Pierre du St-Sépulcre",
@@ -39,7 +39,7 @@
       "weight": 1000.0 ,
       "quantity" : 1,
       "categorie": ["historique", "sacré"],
-      "image": ["img9.png", "imgq.png"] 
+      "image": ["../frontend/img/img-json/jesus1.png", "../frontend/img/img-json/jesus2.png"]
     },
     {
       "title": "Gravier Signature",
@@ -49,7 +49,7 @@
       "weight": 0.5 ,
       "quantity" : 99,
       "categorie": ["permanente"],
-      "image": ["imgw.png", "imge.png"] 
+      "image": ["../frontend/img/img-json/grave.png", "../frontend/img/img-json/gravehaut.png", "../frontend/img/img-json/image_gravier.png"]
     },
     {
       "title": "Gravillon d'Exception",
@@ -59,7 +59,7 @@
       "weight": 5.0 ,
       "quantity" : 49,
       "categorie": ["permanente"],
-      "image": ["imgr.png", "imgt.png"] 
+      "image": ["../frontend/img/img-json/image_gravillon.png", "../frontend/img/img-json/photo-gravillon2.png"]
     },
     {
       "title": "Gallet Unique",
@@ -79,7 +79,7 @@
       "weight": 11.1 ,
       "quantity" : 299,
       "categorie": ["permanente", "sport"],
-      "image": ["imgi.png", "imgo.png"] 
+      "image": ["../frontend/img/img-json/image_galet_unite.png", "../frontend/img/img-json/image-galets.png", "../frontend/img/img-json/image-galets2.png"]
     },
     {
       "title": "Gallet de Ricochet",
@@ -89,7 +89,7 @@
       "weight": 10.0 ,
       "quantity" : 299,
       "categorie": ["permanente", "sport"],
-      "image": ["imgp.png", "imga.png"] 
+      "image": ["../frontend/img/img-json/image-galets.png", "../frontend/img/img-json/image-ricochet2.png", "../frontend/img/img-json/image-ricochet.png"]
     },
     {
       "title": "Pavé de lancée",
@@ -99,7 +99,7 @@
       "weight": 2803.0 ,
       "quantity" : 299,
       "categorie": ["permanente", "sport", "defense"],
-      "image": ["imgs.png", "imgd.png"] 
+      "image": ["../frontend/img/img-json/image-pave.png", "../frontend/img/img-json/pave2.png", "../frontend/img/img-json/pave3.png"]
     },
     {
       "title":"Pavé Diamond Black",
@@ -109,7 +109,7 @@
       "weight":800,
       "quantity":25,
       "categorie":["sport","contemporain"],
-      "image": ["imgf.png", "imgg.png"] 
+      "image": ["../frontend/img/img-json/meteocote.png", "../frontend/img/img-json/meteorite.png", "../frontend/img/img-json/meteorite2.jpg"]
     },
     {
       "title": "Rocher piège Indiana Jones",  
@@ -119,7 +119,7 @@
       "weight": 2500,
       "quantity": 1,   
       "categorie": ["cult culture","collector"],
-      "image": ["imgh.png", "imgj.png"]
+      "image": ["../frontend/img/img-json/indianajones.png", "../frontend/img/img-json/photo_indianajones.jpg"]
     },
     {   
       "title": "Gemme de l'espace",
@@ -129,7 +129,7 @@
       "weight": 75,
       "quantity": 3,   
       "categorie": ["science fiction","spirituel"], 
-      "image": ["imgk.png", "imgl.png"] 
+      "image": ["../frontend/img/img-json/pierre-espace.png", "../frontend/img/img-json/pierre-espace2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme de l'esprit",  
@@ -139,7 +139,7 @@
       "weight": 210,
       "quantity": 15,
       "categorie": ["bien-être","spirituel"],
-      "image": ["imgz.png", "imgx.png"]
+      "image": ["../frontend/img/img-json/pierre-esprit.png", "../frontend/img/img-json/pierre-esprit2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme de l'âme",
@@ -149,7 +149,7 @@
       "weight": 7,
       "quantity": 5,
       "categorie": ["spiritualité","collector"],
-      "image": ["imgc.png", "imgv.png"]
+      "image": ["../frontend/img/img-json/pierre-ame2.png", "../frontend/img/img-json/pierre-ame.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme de la réalité",
@@ -159,7 +159,7 @@
       "weight": 2,
       "quantity": 1,
       "categorie": ["science","collector"],
-      "image":["imgb.png", "imgn.png"]
+      "image":["../frontend/img/img-json/pierre-realite.png", "../frontend/img/img-json/pierre-realite2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme du temps",
@@ -169,7 +169,7 @@
       "weight": 12,
       "quantity": 3,
       "categorie": ["spirituel","collector"],
-      "image":["img11.png", "img12.png"] 
+      "image":["../frontend/img/img-json/pierre-temps.png", "../frontend/img/img-json/pierre-temps2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Gemme du pouvoir",
@@ -179,7 +179,7 @@
       "weight": 45,
       "quantity": 1,
       "categorie": ["ésotérique","collector"],
-      "image":["img111.png", "img112.png"]
+      "image":["../frontend/img/img-json/pierre-pouvoir.png", "../frontend/img/img-json/pierre-pouvoir2.png", "../frontend/img/img-json/pierresinfinity.png"]
     },
     {
       "title": "Cœur de l'océan",
@@ -189,7 +189,7 @@
       "weight": 69, 
       "quantity": 1,
       "categorie": ["historique","collector"],
-      "image":["img21.png", "img22.png"]
+      "image":["../frontend/img/img-json/pierre_titanic.png", "../frontend/img/img-json/pierre-titanic.png", "../frontend/img/img-json/pierre-titanic2.png"]
     },
     {
       "title": "La pierre qui roule mais n'amasse pas de mousse",
@@ -199,7 +199,7 @@
       "weight": 1500,
       "quantity": 25,
       "categorie": ["bien-être", "zen"],
-      "image":["img221.png", "img222.png"]
+      "image":["../frontend/img/img-json/image_mousse.png", "../frontend/img/img-json/mousse2.png", "../frontend/img/img-json/mousse-3.png"]
     }
   ]
 }
