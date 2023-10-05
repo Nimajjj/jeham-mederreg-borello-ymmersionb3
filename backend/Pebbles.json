@@ -8,7 +8,7 @@
       "weight": 21.12,
       "quantity" : 1,
       "categorie": ["historique", "precieux", "maudit"],
-      "image": ["img1.png", "img2.png"] 
+      "image": ["../frontend/img/img-json/kohinor1.png", "../frontend/img/img-json/kohinoor2.png"]
     },
     {
       "title": "Pierre de Rosette",
@@ -18,18 +18,9 @@
       "weight": 762000.0 ,
       "quantity" : 1,
       "categorie": ["historique"],
-      "image": ["img3.png", "img4.png"] 
+      "image": ["../frontend/img/img-json/rosette1.png", "../frontend/img/img-json/rosette2.png", "../frontend/img/img-json/rosette3.png"]
     },
-    {
-      "title": "Pierre de Londres",
-      "description": "La mystérieuse pierre de Londres, diamant jaune canari aux origines confidentielles. Cette pierre préservée des assauts nazis durant la guerre apportera une touche d'histoire secrète à votre collection.",
-      "price": 60.0,
-      "breed": "pierre",
-      "weight": 2.5 ,
-      "quantity" : 1,
-      "categorie": ["historique", "precieux"],
-      "image": ["img5.png", "img6.png"] 
-    },
+
     {
       "title": "الحجر الأسود",
       "description": "La mystérieuse Pierre Noire, témoin des origines de l'Islam et relique sacrée dissimulée au coeur de la Mecque. Son aura légendaire et son histoire remontant à Adam séduiront les collectors en quête de spiritualité et d'authenticité.",
