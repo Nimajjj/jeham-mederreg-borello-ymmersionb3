@@ -1,0 +1,260 @@
+:root {
+
+    --black: #010101;
+    --white: #ffffff;
+    --greyz: #f2f2f4;
+
+}
+
+@font-face {
+    font-family: 'CenturyBold';
+    src: url('../fonts/CenturyGothicW05-Bold.woff2');
+}
+
+@font-face {
+    font-family: 'CenturyRegular';
+    src: url('../fonts/CenturyGothicW05-Regular.woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: CenturyRegular, Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    color: var(--black);
+    z-index: 3;
+
+}
+
+header h1 {
+    font-family: 'CenturyBold', Arial, sans-serif;
+    margin: 20px 0;
+}
+
+.Menu {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.Menu ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.Menu ul li {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Menu ul li a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.content-season {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top : 100px;
+}
+
+h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.title-season p {
+    text-align: center;
+}
+.icons {
+    width: 20px;
+    height: 20px;
+}
+
+.logo_class {
+    margin-left: 60px;
+}
+
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+.navigation div {
+    padding: 10px;
+}
+
+.navigation div a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.search {
+    border: none;
+    background-color: transparent;
+    width: 200px;
+    font-size: 16px;
+}
+
+input {
+    border: none;
+    background-color: transparent;
+    width: 200px;
+    font-size: 16px;
+    margin-right: 100px;
+}
+
+input:focus {
+    outline: none;
+}
+/*a little line under the input */
+input::placeholder {
+    text-decoration: underline;
+    text-decoration-color: var(--black);
+    text-decoration-thickness: 1px;
+}
+
+
+.filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.filter div {
+    padding: 10px;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+}
+
+
+footer {
+    background-color: var(--greyz);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 400px;
+    padding: 100px;
+}
+
+footer h2 {
+    margin: 20px 0;
+}
+
+footer p {
+    margin: 20px 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+.categories {
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 40px 0;
+}
+
+.container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container_products {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.rock {
+    background-color: var(--greyz);
+    width: inherit;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin: 10px;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    flex: 1;
+    object-fit: contain;
+}
+
+.rock:hover {
+    & img, & p {
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+    }
+}
+
+p {
+    align-self: flex-start;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.footer_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.footer_social img {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+}
+
+.footer_txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
+}
