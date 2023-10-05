@@ -28,7 +28,8 @@ function apply_cart(cart) {
         div.classList.add('description-product');
 
         // Add name
-        const nameEl = document.createElement('p');
+        const nameEl = document.createElement('a');
+        nameEl.href = "article.html?id=" + product.ID
         nameEl.classList.add('name');
         nameEl.innerText = product.title;
         div.appendChild(nameEl);
