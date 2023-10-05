@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS pebbles_categories
         FOREIGN KEY (id_categorie) REFERENCES categories (id)
 );
 
-CREATE INDEX IF NOT EXISTS id_caillou
+CREATE INDEX IF NOT EXISTS id_pebble
     ON pebbles_categories (id_pebble);
 
 CREATE INDEX IF NOT EXISTS id_categorie
