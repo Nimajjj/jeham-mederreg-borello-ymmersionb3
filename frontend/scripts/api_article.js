@@ -57,6 +57,11 @@ function apply_pebble(pebble) {
             imgs3[1].src = "../img/img-json/" + element
         }
     })
+
+    if (pebble.image.length < 3) {
+        imgs3[0].remove()
+        imgs3[1].remove()
+    }
 }
 
 // call api caller
