@@ -3,6 +3,7 @@ package repo
 import (
 	"database/sql"
 	"fmt"
+	"prgc/model"
 )
 
 type CategorieRepo struct {
@@ -76,5 +77,28 @@ func (cr *CategorieRepo) GetCategoriesForPebble(pebble_id int) ([]string, error)
         }
         categories = append(categories, category)
     }
+    return categories, nil
+}
+
+
+func (cr *CategorieRepo) GetAllCategories() ([]model.Categorie, error) {
+    var categories []model.Categorie
+
+    query := "SELECT * FROM categories"
+    rows, err := cr.db.Query(query)
+    if err != nil {
+        return nil, err
+    }
+    defer rows.Close()
+
+    for rows.Next() {
+        var cat model.Categorie
+        err := rows.Scan(&cat.ID, &cat.Title)
+        if err != nil {
+            return nil, err
+        }
+        categories = append(categories, cat)
+    }
+
     return categories, nil
 }

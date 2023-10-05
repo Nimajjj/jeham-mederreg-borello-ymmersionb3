@@ -26,6 +26,9 @@ func SetupRoutes() {
     // search pebbles
     router.GET("/pebbles/:categories/:order/:keywords", searchPebble)
 
+    // categories
+    router.GET("/categories/", getAllCat)
+
     // cart
     router.GET("/cart/:user", getUserCart)
     router.GET("/cart/add/:user/:pebble/:quantity", addPebbleToCart)

@@ -57,12 +57,16 @@ header {
 }
 
 img.small-img {
-    width: 200px;
-    height: 200px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .carousel {
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .carousel-image:not(:first-child) {
@@ -70,8 +74,8 @@ img.small-img {
 }
 
 .carousel-image {
-    width: 400px;
-    height: 400px;
+    width: 450px;
+    height: 450px;
 }
 
 .prev-button,
