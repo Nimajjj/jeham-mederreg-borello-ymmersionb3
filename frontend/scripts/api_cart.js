@@ -49,14 +49,12 @@ function apply_cart(cart) {
         quantityEl.innerHTML = "Quantité: " + product.quantity
         div.appendChild(quantityEl);
 
-        // TODO(nmj): add href to script to increase item from cart
         const addBt = document.createElement("a")
         addBt.innerHTML = "(+)"
         addBt.href = "#"
         addBt.addEventListener("click",  () => increase_item_qt(cart.ID, product.ID))
         div.appendChild(addBt);
         
-        // TODO(nmj): add href to script to decrease item from cart
         const lessBt = document.createElement("a")
         lessBt.innerHTML = "(-)<br>"
         lessBt.href = "#"
@@ -65,8 +63,9 @@ function apply_cart(cart) {
 
         const deleteBt = document.createElement("a")
         deleteBt.classList.add("delete")
+        deleteBt.href = "#"
         deleteBt.innerHTML = "Supprimer"
-        // TODO(nmj): add href to script to remove item from cart
+        deleteBt.addEventListener("click",  () => remove_item(cart.ID, product.ID))
         div.appendChild(deleteBt);
 
         // Add to container
@@ -85,6 +84,11 @@ async function increase_item_qt(id_user, id_item) {
 
 async function decrease_item_qt(id_user, id_item) {
     const url = `http://localhost:8080/cart/add/${id_user}/${id_item}/-1`
+    fetch(url).then(() => location.reload())
+}
+
+async function remove_item(id_user, id_item) {
+    const url = `http://localhost:8080/cart/add/${id_user}/${id_item}/-999999`
     fetch(url).then(() => location.reload())
 }
 
