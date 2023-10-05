@@ -17,6 +17,8 @@ func getUserCart(ctx *gin.Context) {
     cart_repo := repo.NewCartRepo()
     cart := cart_repo.SelectCartFromUser(user_id)
 
+    ctx.Header("Access-Control-Allow-Origin", "*")
+    ctx.Header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS")
     ctx.IndentedJSON(http.StatusOK, cart.JsonCompatible())
 }
 
@@ -36,6 +38,8 @@ func addPebbleToCart(ctx *gin.Context) {
         cart_repo.AddPebbleToCart(user_id, pebble_id, quantity)
     }
 
+    ctx.Header("Access-Control-Allow-Origin", "*")
+    ctx.Header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS")
     ctx.IndentedJSON(http.StatusOK, nil)
 }
 
