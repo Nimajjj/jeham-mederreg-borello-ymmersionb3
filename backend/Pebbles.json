@@ -8,7 +8,7 @@
       "weight": 21.12,
       "quantity" : 1,
       "categorie": ["historique", "precieux", "maudit"],
-      "image": ["../frontend/img/img-json/kohinor1.png", "../frontend/img/img-json/kohinoor2.png"]
+      "image": ["kohinor1.png", "kohinoor2.png"]
     },
     {
       "title": "Pierre de Rosette",
@@ -18,7 +18,7 @@
       "weight": 762000.0 ,
       "quantity" : 1,
       "categorie": ["historique"],
-      "image": ["../frontend/img/img-json/rosette1.png", "../frontend/img/img-json/rosette2.png", "../frontend/img/img-json/rosette3.png"]
+      "image": ["rosette1.png", "rosette2.png", "rosette3.png"]
     },
 
     {
