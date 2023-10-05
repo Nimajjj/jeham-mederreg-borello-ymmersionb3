@@ -1,3 +1,6 @@
+CREATE DATABASE IF NOT EXISTS "PetitsRochersGrosCailloux";
+USE "PetitsRochersGrosCailloux";
+
 CREATE TABLE IF NOT EXISTS categories
 (
     id    INT AUTO_INCREMENT
@@ -28,11 +31,6 @@ CREATE TABLE IF NOT EXISTS pebbles_categories
         FOREIGN KEY (id_categorie) REFERENCES categories (id)
 );
 
-CREATE INDEX IF NOT EXISTS id_pebble
-    ON pebbles_categories (id_pebble);
-
-CREATE INDEX IF NOT EXISTS id_categorie
-    ON pebbles_categories (id_categorie);
 
 CREATE TABLE IF NOT EXISTS photos
 (
@@ -51,12 +49,6 @@ CREATE TABLE IF NOT EXISTS pebbles_photos
         FOREIGN KEY (id_photo) REFERENCES photos (id)
 );
 
-CREATE INDEX IF NOT EXISTS id_caillou
-    ON pebbles_photos (id_pebble);
-
-CREATE INDEX IF NOT EXISTS id_photo
-    ON pebbles_photos (id_photo);
-
 CREATE TABLE IF NOT EXISTS users
 (
     id           INT AUTO_INCREMENT
@@ -74,9 +66,6 @@ CREATE TABLE IF NOT EXISTS cart
         FOREIGN KEY (fk_id_user) REFERENCES users (id)
 );
 
-CREATE INDEX IF NOT EXISTS fk_id_user
-    ON cart (fk_id_user);
-
 CREATE TABLE IF NOT EXISTS pebbles_cart
 (
     id_caillou INT NULL,
@@ -87,9 +76,3 @@ CREATE TABLE IF NOT EXISTS pebbles_cart
     CONSTRAINT pebbles_cart_ibfk_2
         FOREIGN KEY (id_basket) REFERENCES cart (id)
 );
-
-CREATE INDEX IF NOT EXISTS id_basket
-    ON pebbles_cart (id_basket);
-
-CREATE INDEX IF NOT EXISTS id_caillou
-    ON pebbles_cart (id_caillou);
