@@ -22,6 +22,10 @@
     font-family: CenturyRegular, Arial, sans-serif;
 }
 
+a {
+    text-decoration: none;
+    color: var(--white);
+}
 header {
     text-align: center;
     position: sticky;
