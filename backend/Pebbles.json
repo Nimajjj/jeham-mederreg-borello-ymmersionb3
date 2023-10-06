@@ -92,7 +92,7 @@
       "image": ["image-galets.png", "image-ricochet2.png", "image-ricochet.png"]
     },
     {
-      "title": "Pavé de lancée",
+      "title": "Pavé de lancé",
       "description": "Taillé dans un marbre résistant aux chocs, son galbe aérodynamique en fera l'accessoire indispensable de tout manifestant averti. Précision et portée optimisées pour faire passer votre message avec panache.",
       "price": 850.0,
       "breed": "caillou",
@@ -200,6 +200,36 @@
       "quantity": 25,
       "categorie": ["bien-être", "zen"],
       "image":["image_mousse.png", "mousse2.png", "mousse-3.png"]
+    },
+    {
+      "title": "Éclats de Gemmes",
+      "description": "Découvrez la magie de la Pierre de Lune, une gemme enchanteresse qui brille comme la lueur douce d'une nuit étoilée, apportant avec elle la sérénité et l'énergie mystique que vous cherchez.",
+      "price": 8036,
+      "breed": "pierre",
+      "weight": 10000,
+      "quantity": 1,
+      "categorie": ["bien-être", "zen", "collector"],
+      "image":["brille.png", "brilledos.png", "pierre-brille3.png"]
+    },
+    {
+      "title": "La Pierre Solaire",
+      "description": "Un fragment vibrant d'un soleil couchant, porteur de l'énergie résiliente du crépuscule, malgré ses fissures, elle brille d'une lueur chaude qui incarne la beauté dans l'imperfection",
+      "price": 2030,
+      "breed": "pierre",
+      "weight": 1600,
+      "quantity": 1,
+      "categorie": ["bien-être", "collector"],
+      "image":["pierre-carre.png", "plate.png", "platehaut.png"]
+    },
+    {
+      "title": "La Pierre d'Équilibre",
+      "description": "Une pierre grise marbrée de noir, symbole de l'harmonie entre lumière et obscurité, qui incarne la force dans la diversité, la simplicité dans la complexité.",
+      "price": 5250,
+      "breed": "pierre",
+      "weight": 1210,
+      "quantity": 1,
+      "categorie": ["bien-être", "collector", "precieux"],
+      "image":["pierrepierre1.png", "pierrepierre.png", "pierrepaspierre.png"]
     }
   ]
 }
