@@ -7,6 +7,10 @@ const filter3 = document.querySelector("#filter3")
 
 const sortFilter = document.querySelector("#sort")
 
+const searchBar = document.querySelector("#searchBar")
+const searchBt = document.querySelector("#submitSearch")
+
+
 let CAT = []
 let categories = "[]" 
 let sort = "nil"
@@ -70,13 +74,20 @@ function reloadPage() {
 
     sortValue = sortFilter.value
     if (sortValue != "default") {
+        if (!url.includes("?")) {url+="?"}
         url += `&sort=${sortValue}`
+    }
+
+    if (searchBar.value != "") {
+        if (!url.includes("?")) {url+="?"}
+        url += `&keywords=${searchBar.value}`
     }
 
     window.location.href = url
 }
 
 sortFilter.addEventListener('change', () => reloadPage())
+submitSearch.addEventListener('click', () => reloadPage())
 
 
 filter1.addEventListener('change', function() {

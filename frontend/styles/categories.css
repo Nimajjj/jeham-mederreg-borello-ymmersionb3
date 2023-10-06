@@ -262,6 +262,10 @@ p {
     transition: background-image 0.6s ease-in-out;
 }
 
+#submitSearch:hover {
+    cursor: pointer;
+}
+
 .description_hover {
     opacity: 0;
     display: flex;
