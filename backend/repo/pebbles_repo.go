@@ -2,7 +2,6 @@ package repo
 
 import (
 	"database/sql"
-	"fmt"
 	"strconv"
 	"strings"
 	"time"
@@ -33,7 +32,7 @@ func (pr *PebbleRepo) InsertNewPebble(pebble *model.Pebble) {
 
 	if count > 0 {
 		// if pebble already exists in db return
-		fmt.Print("try InsertNewPebble -> ", pebble.Title, " -> FAILED ALREADY EXISTS\n")
+//		fmt.Print("try InsertNewPebble -> ", pebble.Title, " -> FAILED ALREADY EXISTS\n")
 		return
 	}
 
@@ -65,7 +64,7 @@ func (pr *PebbleRepo) InsertNewPebble(pebble *model.Pebble) {
 		photo_repo.InsertNewPhoto(photo, id)
 	}
 
-	fmt.Print("try InsertNewPebble -> ", pebble.Title, " -> SUCCESS\n")
+//	fmt.Print("try InsertNewPebble -> ", pebble.Title, " -> SUCCESS\n")
 }
 
 func (pr *PebbleRepo) GetPebbleById(id int) (model.Pebble, error) {
@@ -75,10 +74,10 @@ func (pr *PebbleRepo) GetPebbleById(id int) (model.Pebble, error) {
 
 	err := pr.db.QueryRow(query, id).Scan(&pebble.Title, &pebble.Description, &pebble.Price, &pebble.Breed, &pebble.Weight, &pebble.Quantity)
 	if err != nil {
-		fmt.Println("ERROR while requesting pebble from DB")
-		fmt.Print(query)
-		fmt.Print("  id = ")
-		fmt.Println(id)
+//		fmt.Println("ERROR while requesting pebble from DB")
+//		fmt.Print(query)
+//		fmt.Print("  id = ")
+//		fmt.Println(id)
 		panic(err)
 	}
 
@@ -86,7 +85,7 @@ func (pr *PebbleRepo) GetPebbleById(id int) (model.Pebble, error) {
 	categoriesRepo := NewCategorieRepo()
 	pebble.Categories, err = categoriesRepo.GetCategoriesForPebble(id)
 	if err != nil {
-		fmt.Println("ERROR while requesting categories from DB")
+//		fmt.Println("ERROR while requesting categories from DB")
 		panic(err)
 	}
 
@@ -94,11 +93,11 @@ func (pr *PebbleRepo) GetPebbleById(id int) (model.Pebble, error) {
 	photoRepo := NewPhotoRepo()
 	pebble.Photos, err = photoRepo.GetPhotosForPebble(id)
 	if err != nil {
-		fmt.Println("ERROR while requesting photos from DB")
+//		fmt.Println("ERROR while requesting photos from DB")
 		panic(err)
 	}
 
-	fmt.Println("GetPebbleById SUCCESS -> ", pebble)
+//	fmt.Println("GetPebbleById SUCCESS -> ", pebble)
 	pebble.ID = id
 	return pebble, nil
 }
@@ -193,7 +192,7 @@ func (pr *PebbleRepo) SearchPebbles(search Search) ([]model.Pebble, error) {
 		case "price_asc":
 			query += " ORDER BY p.price ASC"
 		default:
-			fmt.Println("Incorect ORDER flag")
+//			fmt.Println("Incorect ORDER flag")
 		}
 	}
 

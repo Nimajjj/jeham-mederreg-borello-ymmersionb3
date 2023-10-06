@@ -1,7 +1,6 @@
 package repo
 
 import (
-    "fmt"
     "database/sql"
 )
 
@@ -15,7 +14,7 @@ func NewPhotoRepo() *PhotoRepo {
 }
 
 func (pr *PhotoRepo) InsertNewPhoto(photo_path string, pebble_id int) {
-    fmt.Print("try InsertNewPhoto -> ", photo_path, "::", pebble_id)
+//    fmt.Print("try InsertNewPhoto -> ", photo_path, "::", pebble_id)
 
     var count int
     query := "SELECT COUNT(*) FROM photos WHERE FilePath = ?"
@@ -24,7 +23,7 @@ func (pr *PhotoRepo) InsertNewPhoto(photo_path string, pebble_id int) {
       panic(err)
     }
     if count > 0 {
-        fmt.Print(" -> FAILED: ALREADY EXISTS\n")
+//        fmt.Print(" -> FAILED: ALREADY EXISTS\n")
         return 
     }
 
@@ -51,7 +50,7 @@ func (pr *PhotoRepo) InsertNewPhoto(photo_path string, pebble_id int) {
       panic(err) 
     }
 
-    fmt.Print(" -> SUCCESS\n")
+//    fmt.Print(" -> SUCCESS\n")
 }
 
 

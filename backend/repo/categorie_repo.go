@@ -2,7 +2,6 @@ package repo
 
 import (
 	"database/sql"
-	"fmt"
 	"prgc/model"
 )
 
@@ -17,7 +16,7 @@ func NewCategorieRepo() *CategorieRepo {
 
 
 func (cr *CategorieRepo) InsertNewCategorie(categorie_title string, pebble_id int) {
-    fmt.Print("try InsertNewCategorie -> ", categorie_title, "::", pebble_id)
+//    fmt.Print("try InsertNewCategorie -> ", categorie_title, "::", pebble_id)
 
     var count int
     query := "SELECT COUNT(*) FROM categories WHERE title = ?"
@@ -33,9 +32,9 @@ func (cr *CategorieRepo) InsertNewCategorie(categorie_title string, pebble_id in
         if err != nil {
           panic(err) 
         }
-        fmt.Print(" -> INSERT SUCCESS")
+//        fmt.Print(" -> INSERT SUCCESS")
     } else {
-        fmt.Print(" -> INSERT FAILED: ALREADY EXISTS")
+//        fmt.Print(" -> INSERT FAILED: ALREADY EXISTS")
     }
 
     // get categorie id
@@ -53,7 +52,7 @@ func (cr *CategorieRepo) InsertNewCategorie(categorie_title string, pebble_id in
       panic(err) 
     }
     
-    fmt.Print(" -> LINK PEBBLE SUCCESS\n")
+//    fmt.Print(" -> LINK PEBBLE SUCCESS\n")
 }
 
 func (cr *CategorieRepo) GetCategoriesForPebble(pebble_id int) ([]string, error) {

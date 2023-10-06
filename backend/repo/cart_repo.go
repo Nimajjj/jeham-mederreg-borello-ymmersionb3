@@ -2,7 +2,6 @@ package repo
 
 import (
 	"database/sql"
-	"fmt"
 	"prgc/model"
 	"strconv"
 )
@@ -22,14 +21,14 @@ func (cr *CartRepo) SelectCartFromUser(user_id int) model.Cart {
     query := "SELECT ID FROM cart WHERE FK_ID_User = ?"
     err := cr.db.QueryRow(query, user_id).Scan(&cart.ID)
     if (err != nil) {
-        fmt.Println("ERROR while requesting cart from DB")
+//        fmt.Println("ERROR while requesting cart from DB")
         panic(err)
     }
 
     query = "SELECT ID_Caillou, Quantity FROM pebbles_cart WHERE ID_Basket = ? ORDER BY ID_Caillou ASC"
     rows, err := cr.db.Query(query, cart.ID)
     if (err != nil) {
-        fmt.Println("ERROR while requesting pebbles_cart from DB")
+//        fmt.Println("ERROR while requesting pebbles_cart from DB")
         panic(err)
     }
     defer rows.Close()
@@ -54,7 +53,7 @@ func (cr *CartRepo) SelectCartFromUser(user_id int) model.Cart {
         cart.Content[&pebble] = qt
     }
 
-    fmt.Println("SelectCartFromUser SUCCESS -> ", cart)
+//    fmt.Println("SelectCartFromUser SUCCESS -> ", cart)
     return cart
 }
 
@@ -67,27 +66,27 @@ func (cr *CartRepo) InsertNewCart(cart model.Cart) {
       panic(err)
     }
     if (count != 0) {
-        fmt.Println("INSERT FAILED: Cart already exists")
+//        fmt.Println("INSERT FAILED: Cart already exists")
         return
     }
 
     query = "INSERT INTO Cart (FK_ID_User) VALUES (?)"
     _, err = cr.db.Exec(query, cart.UserID)
     if err != nil {
-        fmt.Println("INSERT FAILED: ", query)
+ //       fmt.Println("INSERT FAILED: ", query)
         panic(err) 
     }
     
     query = "SELECT ID FROM cart WHERE FK_ID_User = ?"
     cr.db.QueryRow(query, cart.UserID).Scan(&cart.ID)
 
-    fmt.Println(cart)
+ //   fmt.Println(cart)
     for p, qt := range cart.Content {
         query = "INSERT INTO pebbles_cart (ID_Caillou, ID_Basket, Quantity) VALUES (?, ?, ?)"
         _, err = cr.db.Exec(query, p.ID, cart.ID, qt)
         if err != nil {
-            fmt.Println("INSERT FAILED: ", query)
-            fmt.Println(p.ID, cart.ID, qt)
+//            fmt.Println("INSERT FAILED: ", query)
+//            fmt.Println(p.ID, cart.ID, qt)
             panic(err) 
         }
     }
