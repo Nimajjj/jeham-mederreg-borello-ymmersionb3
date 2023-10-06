@@ -1,7 +1,7 @@
 package routes
 
 import (
-//    "github.com/gin-contrib/cors"
+    "github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )
 
@@ -16,7 +16,7 @@ func testErr(err error) {
 
 func Init() {
 	router = gin.Default()
-    //router.Use(cors.Default())
+    router.Use(cors.Default())
 }
 
 func SetupRoutes() {

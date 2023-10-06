@@ -202,6 +202,7 @@ footer a {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .rock {
@@ -241,12 +242,7 @@ p {
 }
 
 .categories {
-    display: flex;
-    height: 800px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    margin: 40px 0;
+    height: 100%;
 }
 
 .rock_product {
@@ -254,8 +250,8 @@ p {
     background-image: url(../img/brille.png);
     background-position: center;
     background-repeat: no-repeat;
-    width: inherit;
-    height: 800px;
+    width: 300px;
+    height: 600px;
     display: flex;
     align-items: center;
     flex-flow: column;
@@ -278,9 +274,10 @@ p {
 
 .rock_product:hover  {
     background-image: url("../img/brilledos.png");
+    cursor: pointer;
 }
 
-.rock_product:hover > .description_hover  {
+.rock_product:hover > .rock_hover  {
     opacity: 1;
 }
 .footer_social {
