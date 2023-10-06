@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <title>PRGC - article</title>
+    <link rel="stylesheet" href="../styles/frontpage.css">
+    <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+<header>
+    <div class="Menu">
+        <div class="logo_class">
+            <h1><a href="frontpage.html">PRGC</a></h1>
+        </div>
+        <ul>
+            <li><a href="">Cailloux Célébres</a></li>
+            <li><a href="">Cailloux de Sport</a></li>
+            <li><a href="">Collection Permanentes</a></li>
+            <li><a href="">Pierres Historiques</a></li>
+            <li><a href="">Accessoires</a></li>
+        </ul>
+        <div class="navigation">
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="Que Cherchez-vous ?">
+                </label>
+            </div>
+            <div class="account">
+                <a href=""><img class="icons" src="../img/icon-user.png" alt="user_icons"></a>
+            </div>
+            <div class="cart">
+                <a href="cart.html"><img class="icons" src="../img/icon-shopping-bag.png" alt="cart_icons"></a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="form">
+    <h1>Nouvel article</h1>
+    <label for="titre">Titre :</label>
+    <input type="text" id="titre" name="titre" required><br><br>
+
+    <label for="description">Description :</label>
+    <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+    <label for="prix">Prix :</label>
+    <input type="number" id="prix" name="prix" step="0.01" required><br><br>
+
+    <label for="race">Race :</label>
+    <input type="text" id="race" name="race" required><br><br>
+
+    <label for="poids">Poids :</label>
+    <input type="number" id="poids" name="poids" step="0.01" required><br><br>
+
+    <label for="quantite">Quantité :</label>
+    <input type="number" id="quantite" name="quantite" required><br><br>
+
+    <label for="categorie">Catégorie :</label>
+    <select id="categorie" name="categorie[]" multiple required>
+        <option value="bien-être">Bien-être</option>
+        <option value="collector">Collector</option>
+        <option value="precieux">Précieux</option>
+        <option value="historique">Historique</option>
+        <option value="zen">Zen</option>
+        <option value="ésotérique">Ésotérique</option>
+    </select><br><br>
+
+
+    <input type="submit" value="Ajouter l'article">
+</div>
+</body>
+</html>
