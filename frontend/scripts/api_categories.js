@@ -5,6 +5,8 @@ const filter1 = document.querySelector("#filter1")
 const filter2 = document.querySelector("#filter2")
 const filter3 = document.querySelector("#filter3")
 
+const sortFilter = document.querySelector("#sort")
+
 let CAT = []
 let categories = "[]" 
 let sort = "nil"
@@ -66,8 +68,15 @@ function reloadPage() {
         }
     })
 
+    sortValue = sortFilter.value
+    if (sortValue != "default") {
+        url += `&sort=${sortValue}`
+    }
+
     window.location.href = url
 }
+
+sortFilter.addEventListener('change', () => reloadPage())
 
 
 filter1.addEventListener('change', function() {
@@ -143,6 +152,13 @@ url_params.forEach( async (value, key) => {
     }
     if (key == "sort") {
         sort = value
+        let c = Array.from(sortFilter.children)
+        c.forEach((child, i) => {
+            if (child.value == sort) {
+                child.selected = true
+            }
+        })
+        
     }
     if (key == "keywords") {
         keywords = value
