@@ -8,7 +8,7 @@ import (
 )
 
 const HOST = "localhost:8080"
-const LOAD_JSON = true
+const LOAD_JSON = false
 
 func main() {
 	// INIT

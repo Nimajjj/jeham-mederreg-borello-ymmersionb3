@@ -73,5 +73,7 @@ func searchPebble(ctx *gin.Context) {
 
 
     // send response
+    ctx.Header("Access-Control-Allow-Origin", "*")
+    ctx.Header("Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, OPTIONS")
     ctx.IndentedJSON(http.StatusOK, pebbles)
 }
