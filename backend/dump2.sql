@@ -1,4 +1,4 @@
-CREATE DATABASE PetitsRochersGrosCailloux;
+
 USE PetitsRochersGrosCailloux;
 
 CREATE TABLE IF NOT EXISTS categories
