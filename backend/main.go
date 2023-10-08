@@ -22,11 +22,11 @@ func main() {
 
 	if LOAD_JSON {
 		pebble_repo := repo.NewPebbleRepo()
-		fmt.Println("----pebbles importing----")
+		fmt.Println("[PRGC] Importing json data into database...")
 		for _, pebble := range pebbles {
 			pebble_repo.InsertNewPebble(&pebble)
 		}
-		fmt.Println("---------------")
+		fmt.Println("[PRGC] Importing finish!")
 	}
 
 	// RUN

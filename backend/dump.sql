@@ -76,3 +76,6 @@ CREATE TABLE IF NOT EXISTS pebbles_cart
     CONSTRAINT pebbles_cart_ibfk_2
         FOREIGN KEY (id_basket) REFERENCES cart (id)
 );
+
+INSERT INTO users (email, encryptedpwd) VALUES ('test', 'test');
+INSERT INTO cart (fk_id_user) VALUES (1);
