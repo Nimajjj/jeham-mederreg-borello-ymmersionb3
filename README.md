@@ -1,5 +1,5 @@
 # ymmersion-b3-2023 - Petits Rochers Gros Cailloux
-Projet Ymmersion 2023/2024
+Projet Ymmersion 2023/2024  
 Kheir-Eddine Mederreg  
 Laurie Jeham  
 Benjamin Borello  
@@ -8,13 +8,26 @@ Chaque jour, nous marchons à côté d'une véritable mine d'or sans même le r�
 
 ---
 
-# Getting Started
+# Petits Rochers Gros Cailloux
+* [PRGC](#Petits Rochers Gros Cailloux)
+  * [Requirements](#requirements)
+  * [Installation](#installation)
+  * [Authors](#authors)
 
-1. Avant de démarrer le projet veuillez à bien rentrer les informations d'accés de votre base de données MySql dans le fichier `.env` se trouvant à la racine du dossier `/backend`
-2. Veuillez également executer le fichier dump.sql afin de créer la base de donnée.
-3. Lancez le serveur de l'API depuis votre terminal, dans le dossier `/backend` rentrez la commande `go run .`
-4. go version go1.21.1 windows/amd64 est necessaire afin de correctement lancer le Projet.
-5. Ouvrez la page principale du site simplement en ouvrant le fichier `/frontend/pages/frontpage.html`
+## Requirements
+* GO 1.21.1
+* MySQL 8.0
 
+## Installation
+1. Cloner le repo
+2. Importer la base de donner `/backend/dump.sql`
+3. Remplire les informations de connection de la db `/backend/.env`
+4. Ouvir `/frontend/pages/frontpage.html`
 Vous trouverez la documentation de l'API dans le dossier `/doc/documentation.md`
+
+## Authors
+* Don't forget to follow us on Github :D
+  * [Laurie Jeham](https://github.com/Lunasphys) 
+  * [Kheir-Eddine Mederreg](https://github.com/Mkheir13)
+  * [Benjamin Borello](https://github.com/Nimajjj)
 
