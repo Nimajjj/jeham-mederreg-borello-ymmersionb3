@@ -20,7 +20,7 @@ Chaque jour, nous marchons à côté d'une véritable mine d'or sans même le r�
 
 ## Installation
 1. Cloner le repo
-2. Importer la base de donner `/backend/dump.sql`
+2. Importer la base de données `/backend/dump.sql`
 3. Remplire les informations de connection de la db `/backend/.env`
 4. Ouvir `/frontend/pages/frontpage.html`
 Vous trouverez la documentation de l'API dans le dossier `/doc/documentation.md`
