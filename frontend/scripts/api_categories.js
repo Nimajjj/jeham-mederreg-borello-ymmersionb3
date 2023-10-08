@@ -26,7 +26,7 @@ function create_pebbles(pebble) {
     div1.addEventListener("mouseleave", () => div1.style.backgroundImage = `url("../img/img-json/${pebble.image[0]}")`)
 
     div1.addEventListener("click", () => {
-        window.location.href = `localhost:8080/frontend/pages/article.html?id=${pebble.ID}`;
+        window.location.href = `article.html?id=${pebble.ID}`;
     });
 
     container.appendChild(div1)
@@ -61,7 +61,7 @@ function display_filters(catList) {
 }
 
 function reloadPage() {
-    let url = `file:///D:/Ynov/B3/ymmersion-b3-2023/frontend/pages/categories.html`;
+    let url = `categories.html`;
 
     CAT.forEach((cat, i) => {
         if (cat == "all") {return}

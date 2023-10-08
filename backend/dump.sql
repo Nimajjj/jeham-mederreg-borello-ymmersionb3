@@ -1,72 +1,78 @@
-CREATE DATABASE IF NOT EXISTS "PetitsRochersGrosCailloux";
-USE "PetitsRochersGrosCailloux";
+CREATE DATABASE PetitsRochersGrosCailloux;
+USE PetitsRochersGrosCailloux;
 
-
-CREATE TABLE IF NOT EXISTS Cailloux (
-    ID INT auto_increment,
-    Title VARCHAR(255),
-    Description VARCHAR(65535),
-    Price INT,
-    Creation DATE,
-    Quantity INT,
-
-    PRIMARY KEY(ID)
+CREATE TABLE IF NOT EXISTS categories
+(
+    id    INT AUTO_INCREMENT
+        PRIMARY KEY,
+    title VARCHAR(255) NULL
 );
 
-CREATE TABLE IF NOT EXISTS Users (
-    ID INT auto_increment,
-    Email VARCHAR(255),
-    EncryptedPwd VARCHAR(255),
-
-    PRIMARY KEY(ID)
+CREATE TABLE IF NOT EXISTS pebbles
+(
+    id          INT AUTO_INCREMENT
+        PRIMARY KEY,
+    title       VARCHAR(255) NULL,
+    description MEDIUMTEXT   NULL,
+    price       FLOAT        NULL,
+    creation    DATE         NULL,
+    quantity    INT          NULL,
+    breed       VARCHAR(255) NULL,
+    weight      FLOAT        NULL
 );
 
-CREATE TABLE IF NOT EXISTS Baskets (
-    ID INT auto_increment,
-
-    FK_ID_User INT,
-
-    FOREIGN KEY(FK_ID_User) REFERENCES Users(ID),
-
-    PRIMARY KEY(ID)
-);
-
-CREATE TABLE IF NOT EXISTS Categories (
-    ID INT auto_increment,
-    Title VARCHAR(255),
-
-    PRIMARY KEY(ID)
-);
-
-CREATE TABLE IF NOT EXISTS Photos (
-    ID INT auto_increment,
-    FilePath VARCHAR(255),
-
-    PRIMARY KEY(ID)
+CREATE TABLE IF NOT EXISTS pebbles_categories
+(
+    id_pebble    INT NULL,
+    id_categorie INT NULL,
+    CONSTRAINT pebbles_categories_ibfk_1
+        FOREIGN KEY (id_pebble) REFERENCES pebbles (id),
+    CONSTRAINT pebbles_categories_ibfk_2
+        FOREIGN KEY (id_categorie) REFERENCES categories (id)
 );
 
 
-CREATE TABLE IF NOT EXISTS Cailloux_Categories (
-    ID_Caillou INT,
-    ID_Categorie INT,
-
-    FOREIGN KEY(ID_Caillou) REFERENCES Cailloux(ID),
-    FOREIGN KEY(ID_Categorie) REFERENCES Categories(ID)
+CREATE TABLE IF NOT EXISTS photos
+(
+    id       INT AUTO_INCREMENT
+        PRIMARY KEY,
+    filepath VARCHAR(255) NULL
 );
 
-CREATE TABLE IF NOT EXISTS Cailloux_Photos (
-    ID_Caillou INT,
-    ID_Photo INT,
-
-    FOREIGN KEY(ID_Caillou) REFERENCES Cailloux(ID),
-    FOREIGN KEY(ID_Photo) REFERENCES Photos(ID)
+CREATE TABLE IF NOT EXISTS pebbles_photos
+(
+    id_pebble INT NULL,
+    id_photo  INT NULL,
+    CONSTRAINT pebbles_photos_ibfk_1
+        FOREIGN KEY (id_pebble) REFERENCES pebbles (id),
+    CONSTRAINT pebbles_photos_ibfk_2
+        FOREIGN KEY (id_photo) REFERENCES photos (id)
 );
 
-CREATE TABLE IF NOT EXISTS Cailloux_Basket (
-    ID_Caillou INT,
-    ID_Basket INT,
-    Quantity INT,
+CREATE TABLE IF NOT EXISTS users
+(
+    id           INT AUTO_INCREMENT
+        PRIMARY KEY,
+    email        VARCHAR(255) NULL,
+    encryptedpwd VARCHAR(255) NULL
+);
 
-    FOREIGN KEY(ID_Caillou) REFERENCES Cailloux(ID),
-    FOREIGN KEY(ID_Basket) REFERENCES Baskets(ID)
+CREATE TABLE IF NOT EXISTS cart
+(
+    id         INT AUTO_INCREMENT
+        PRIMARY KEY,
+    fk_id_user INT NULL,
+    CONSTRAINT cart_ibfk_1
+        FOREIGN KEY (fk_id_user) REFERENCES users (id)
+);
+
+CREATE TABLE IF NOT EXISTS pebbles_cart
+(
+    id_caillou INT NULL,
+    id_basket  INT NULL,
+    quantity   INT NULL,
+    CONSTRAINT pebbles_cart_ibfk_1
+        FOREIGN KEY (id_caillou) REFERENCES pebbles (id),
+    CONSTRAINT pebbles_cart_ibfk_2
+        FOREIGN KEY (id_basket) REFERENCES cart (id)
 );

@@ -8,7 +8,7 @@ import (
 )
 
 const HOST = "localhost:8080"
-const LOAD_JSON = false
+const LOAD_JSON = true
 
 func main() {
 	// INIT
@@ -22,7 +22,7 @@ func main() {
 
 	if LOAD_JSON {
 		pebble_repo := repo.NewPebbleRepo()
-		fmt.Println("----pebbles----")
+		fmt.Println("----pebbles importing----")
 		for _, pebble := range pebbles {
 			pebble_repo.InsertNewPebble(&pebble)
 		}
