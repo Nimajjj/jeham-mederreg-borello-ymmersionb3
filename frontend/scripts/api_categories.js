@@ -26,7 +26,7 @@ function create_pebbles(pebble) {
     div1.addEventListener("mouseleave", () => div1.style.backgroundImage = `url("../img/img-json/${pebble.image[0]}")`)
 
     div1.addEventListener("click", () => {
-        window.location.href = `file:///D:/Ynov/B3/ymmersion-b3-2023/frontend/pages/article.html?id=${pebble.ID}`;
+        window.location.href = `localhost:8080/frontend/pages/article.html?id=${pebble.ID}`;
     });
 
     container.appendChild(div1)
