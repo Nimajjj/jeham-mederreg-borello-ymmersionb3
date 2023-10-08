@@ -10,11 +10,11 @@ Chaque jour, nous marchons à côté d'une véritable mine d'or sans même le r�
 
 # Getting Started
 
-1- Avant de démarrer le projet veuillez à bien rentrer les informations d'accés de votre base de données MySql dans le fichier `.env` se trouvant à la racine du dossier `/backend`
-2- Veuillez également executer le fichier dump.sql afin de créer la base de donnée.
-3- Lancez le serveur de l'API depuis votre terminal, dans le dossier `/backend` rentrez la commande `go run .`
-3'- go version go1.21.1 windows/amd64 est necessaire afin de correctement lancer le Projet.
-4- Ouvrez la page principale du site simplement en ouvrant le fichier `/frontend/pages/frontpage.html`
+1. Avant de démarrer le projet veuillez à bien rentrer les informations d'accés de votre base de données MySql dans le fichier `.env` se trouvant à la racine du dossier `/backend`
+2. Veuillez également executer le fichier dump.sql afin de créer la base de donnée.
+3. Lancez le serveur de l'API depuis votre terminal, dans le dossier `/backend` rentrez la commande `go run .`
+4. go version go1.21.1 windows/amd64 est necessaire afin de correctement lancer le Projet.
+5. Ouvrez la page principale du site simplement en ouvrant le fichier `/frontend/pages/frontpage.html`
 
 Vous trouverez la documentation de l'API dans le dossier `/doc/documentation.md`
 
