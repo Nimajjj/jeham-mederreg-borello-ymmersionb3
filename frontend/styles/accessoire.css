@@ -1,0 +1,9 @@
+div.text-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+    border: #cccccc solid 1px;
+    padding: 20px;
+    margin-top: 10%;
+}

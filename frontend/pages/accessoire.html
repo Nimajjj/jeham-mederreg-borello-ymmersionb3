@@ -5,7 +5,8 @@
     <title>Title</title>
     <title>PRGC - article</title>
     <link rel="stylesheet" href="../styles/frontpage.css">
-    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="../styles/accessoire.css">
 </head>
 <body>
 <header>
@@ -36,39 +37,29 @@
     </div>
 </header>
 
-
-<div class="form">
-    <h1>Nouvel article</h1>
-    <label for="titre">Titre :</label>
-    <input type="text" id="titre" name="titre" required><br><br>
-
-    <label for="description">Description :</label>
-    <textarea id="description" name="description" rows="4" required></textarea><br><br>
-
-    <label for="prix">Prix :</label>
-    <input type="number" id="prix" name="prix" step="0.01" required><br><br>
-
-    <label for="race">Race :</label>
-    <input type="text" id="race" name="race" required><br><br>
-
-    <label for="poids">Poids :</label>
-    <input type="number" id="poids" name="poids" step="0.01" required><br><br>
-
-    <label for="quantite">Quantité :</label>
-    <input type="number" id="quantite" name="quantite" required><br><br>
-
-    <label for="categorie">Catégorie :</label>
-    <select id="categorie" name="categorie[]" multiple required>
-        <option value="bien-être">Bien-être</option>
-        <option value="collector">Collector</option>
-        <option value="precieux">Précieux</option>
-        <option value="historique">Historique</option>
-        <option value="zen">Zen</option>
-        <option value="ésotérique">Ésotérique</option>
-    </select><br><br>
-
-
-    <input type="submit" value="Ajouter l'article">
+<div class="text-container">
+    <h1>Accessoires</h1>
+    <br>
+    <p>Restez à l'affut, notre nouvelle collection présentant une ligne de laisse pour cailloux domestique ainsi que de lasso pour pierre sauvage arrive bientôt. </p>
+    <p>Pour plus d'information, suivez nous sur notre instagram. </p>
 </div>
+
+<footer>
+    <div class="container_footer">
+
+        <div class="footer_right">
+            <div class="footer_txt">
+                <p>© 2021 Petit Rocher Gros Cailloux</p>
+            </div>
+        </div>
+        <div class="footer_social">
+            <a href="https://www.instagram.com/petit_rocher_gros_caillou/"><img src="../img/insta.png"
+                                                                                alt="icon_instagram"></a>
+            <a href="https://github.com/Lunasphys"><img src="../img/github-sign.png" alt="icon_facebook"></a>
+            <a href="https://github.com/Mkheir13"><img src="../img/github-sign.png" alt="icon_facebook"></a>
+            <a href="https://github.com/Nimajjj"><img src="../img/github-sign.png" alt="icon_facebook"></a>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
